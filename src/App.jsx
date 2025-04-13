@@ -40,6 +40,7 @@ import HeroSection from "./components/herosection";
 import HomePageContent from "./pages/home";
 import Footer from "./components/footer";
 
+
 function App() {
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
@@ -47,6 +48,7 @@ function App() {
         <Header />
         <Banner />
         <HeroSection />
+        
       </div>
       <HomePageContent />
       <Footer />
