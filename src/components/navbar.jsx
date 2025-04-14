@@ -41,20 +41,20 @@ const Header = () => {
         </div>
 
         {/* Desktop menu */}
-        <div className="hidden lg:flex lg:gap-x-12">
-          <Link to="/destinations" className="text-sm font-semibold leading-6 text-gray-900">
+        <div className="hidden lg:flex lg:gap-x-12 lg:ml-auto">
+          <Link to="/destinations" className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out">
             Top Destinations
           </Link>
-          <Link to="/packages" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/packages" className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out">
             Tour Packages
           </Link>
-          <Link to="/register" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/register" className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out">
             Register
           </Link>
-          <Link to="/contact" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/contact" className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out">
             Contact Us
           </Link>
-          <Link to="/login" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/login" className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out">
             Log in →
           </Link>
         </div>

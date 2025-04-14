@@ -10,34 +10,20 @@ import zenGarden from "../assets/images/zen-garden.png";
 import kimonoExperience from "../assets/images/kimono-experience.png";
 import japaneseCuisine from "../assets/images/japanese-cuisine.png";
 
-const DestinationDetail = () => {
+const Kyoto = () => {
   return (
     <main className="flex-1 bg-white">
       {/* Hero section */}
-      <div className="relative isolate overflow-hidden pt-14 mb-10 mt-10">
-        <img src={kyotoImage} alt="" className="absolute inset-0 -z-10 size-full object-cover" />
-        <div className="absolute inset-x-0 -top-40 -z-10 transform-gpu overflow-hidden blur-3xl sm:-top-80" aria-hidden="true">
-          <div className="relative left-[calc(50%-11rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 rotate-[30deg] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%-30rem)] sm:w-[72.1875rem]" style={{clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"}}></div>
-        </div>
-        <div className="mx-auto max-w-7xl px-6 lg:px-8">
-          <div className="mx-auto max-w-2xl py-32 sm:py-48 lg:py-56">
-            <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-              <div className="relative rounded-full px-3 py-1 text-sm/6 text-gray-400 ring-1 ring-white/10 hover:ring-white/20"></div>
-            </div>
-            <div className="text-center">
-              <h1 className="text-balance text-5xl font-semibold tracking-tight text-white sm:text-7xl">Discover Your Soulful Destination with us</h1>
-              <p className="mt-8 text-pretty text-lg font-medium text-gray-300 sm:text-xl/8">Unforgettable journeys, exclusive deals, and world-class accommodations await. Book now and get 20% off on your first trip!</p>
-              <div className="mt-10 flex items-center justify-center gap-x-6">
-                <Link to="/register" className="rounded-md bg-indigo-500 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-400 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-400">Get started</Link>
-              </div>
-            </div>
+      <div className="relative isolate overflow-hidden mb-10">
+        <div className="relative w-full h-[70vh]">
+          <img src={kyotoImage} alt="Kyoto, Japan" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-black/40"></div>
+          <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-6">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-white max-w-4xl">Kyoto, Japan</h1>
+            <p className="mt-4 text-lg md:text-xl text-white max-w-2xl">Where tradition meets natural beauty</p>
           </div>
         </div>
-        <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]" aria-hidden="true">
-          <div className="relative left-[calc(50%+3rem)] aspect-[1155/678] w-[36.125rem] -translate-x-1/2 bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-20 sm:left-[calc(50%+36rem)] sm:w-[72.1875rem]" style={{clipPath: "polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"}}></div>
-        </div>
       </div>
-
       {/* Destination Overview */}
       <div className="mx-auto max-w-7xl px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
@@ -267,45 +253,51 @@ const DestinationDetail = () => {
         
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
           {/* Image 1 */}
-          <div className="relative h-80 overflow-hidden rounded-lg">
+          <div className="relative h-80 overflow-hidden rounded-lg group">
             <img src={kyotoTemple2} 
                 alt="Kyoto Temple" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
 
           {/* Image 2 */}
-          <div className="relative h-80 overflow-hidden rounded-lg">
+          <div className="relative h-80 overflow-hidden rounded-lg group">
             <img src={kimonoExperience} 
                 alt="Traditional Garden" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
 
           {/* Image 3 */}
-          <div className="relative h-80 overflow-hidden rounded-lg">
+          <div className="relative h-80 overflow-hidden rounded-lg group">
             <img src={kyotoTemple} 
                 alt="Geisha in Gion" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
 
           {/* Image 4 */}
-          <div className="relative h-80 overflow-hidden rounded-lg">
+          <div className="relative h-80 overflow-hidden rounded-lg group">
             <img src={japaneseCuisine} 
                 alt="Traditional Cuisine" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
 
           {/* Image 5 */}
-          <div className="relative h-80 overflow-hidden rounded-lg">
+          <div className="relative h-80 overflow-hidden rounded-lg group">
             <img src={zenGarden} 
                 alt="Traditional Festival" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
 
           {/* Image 6 */}
-          <div className="relative h-80 overflow-hidden rounded-lg">
+          <div className="relative h-80 overflow-hidden rounded-lg group">
             <img src={teaCeremony} 
                 alt="Tea" 
-                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" />
+                className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+            <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
           </div>
         </div>
       </div>
@@ -313,4 +305,4 @@ const DestinationDetail = () => {
   );
 };
 
-export default DestinationDetail;
+export default Kyoto;

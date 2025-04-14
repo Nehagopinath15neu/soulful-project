@@ -41,10 +41,13 @@ import HeroSection from "./components/herosection";
 import HomePageContent from "./pages/home";
 import TopDestination from "./pages/topdestination";
 import TourPackages from "./pages/tourpackages";
-import DestinationDetail from "./pages/destinationdetail";
 import Login from "./pages/login";
 import ForgotPassword from "./pages/forgotpassword";
 import About from "./pages/about";
+import Registration from "./pages/registration";
+import Contact from "./pages/contact";
+import ContactConfirmation from "./pages/contactconfirmation";
+import Kyoto from "./pages/kyoto";
 import Footer from "./components/footer";
 
 function App() {
@@ -65,10 +68,13 @@ function App() {
         <Route path="/" element={<HomePageContent />} />
         <Route path="/destinations" element={<TopDestination />} />
         <Route path="/packages" element={<TourPackages />} />
-        <Route path="/destination/:id" element={<DestinationDetail />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/about" element={<About />} />
+        <Route path="/register" element={<Registration />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/contact-confirmation" element={<ContactConfirmation />} />
+        <Route path="/kyoto" element={<Kyoto />} />
       </Routes>
       
       <Footer />
