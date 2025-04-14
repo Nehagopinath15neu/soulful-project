@@ -1,6 +1,10 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import KyotoJapan from "../assets/images/kyoto-Japan.png";
+import SantoriniGreece from "../assets/images/Santorini-Greece.png";
+import SedonaArizonaUSA from "../assets/images/Sedona-Arizona-USA.png";
 
-const TopDestinations = () => {
+const TopDestination = () => {
   return (
     <div className="bg-white py-24 sm:py-32">
       <div className="mx-auto max-w-7xl px-6 lg:px-8">
@@ -20,7 +24,7 @@ const TopDestinations = () => {
           {[
             {
               title: "Kyoto, Japan",
-              imgSrc: "/Kyoto-Japan.png",
+              imgSrc: KyotoJapan,
               alt: "Kyoto Temple",
               description:
                 "Immerse yourself in centuries of Japanese culture and tradition. Experience ancient temples, serene gardens, traditional tea ceremonies, and the breathtaking beauty of cherry blossoms in this historic imperial capital.",
@@ -29,7 +33,7 @@ const TopDestinations = () => {
             },
             {
               title: "Santorini, Greece",
-              imgSrc: "/Santorini-Greece.png",
+              imgSrc: SantoriniGreece,
               alt: "Santorini Sunset",
               description:
                 "Experience the magic of the Mediterranean in this stunning Greek island. From iconic white-washed buildings and blue domes to spectacular sunsets, volcanic beaches, and world-class wineries, Santorini offers a perfect blend of romance and adventure.",
@@ -38,7 +42,7 @@ const TopDestinations = () => {
             },
             {
               title: "Sedona, Arizona",
-              imgSrc: "/Sedona-Arizona-USA.png",
+              imgSrc: SedonaArizonaUSA,
               alt: "Sedona Red Rocks",
               description:
                 "Discover the spiritual heart of the American Southwest. With its stunning red rock formations, energy vortexes, and endless outdoor adventures, Sedona offers a unique blend of natural beauty, spiritual wellness, and outdoor excitement.",
@@ -64,12 +68,12 @@ const TopDestinations = () => {
                 {destination.description}
               </p>
               <div className="mt-6">
-                <a
-                  href={destination.link}
+                <Link
+                  to={destination.link}
                   className="rounded-md bg-white/10 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20"
                 >
                   {destination.linkText}
-                </a>
+                </Link>
               </div>
             </article>
           ))}
@@ -79,4 +83,4 @@ const TopDestinations = () => {
   );
 };
 
-export default TopDestinations;
+export default TopDestination;

@@ -34,23 +34,37 @@
 
 // export default App
 import React from "react";
+import { Routes, Route, useLocation } from "react-router-dom";
 import Header from "./components/navbar";
 import Banner from "./components/banner";
 import HeroSection from "./components/herosection";
 import HomePageContent from "./pages/home";
+import TopDestination from "./pages/topdestination";
+import TourPackages from "./pages/tourpackages";
+import DestinationDetail from "./pages/destinationdetail";
 import Footer from "./components/footer";
 
-
 function App() {
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
+  
   return (
     <div className="flex flex-col min-h-screen overflow-hidden">
-      <div className="flex flex-col">
-        <Header />
-        <Banner />
-        <HeroSection />
-        
-      </div>
-      <HomePageContent />
+      <Header />
+      <Banner />
+      {isHomePage && (
+        <div className="flex flex-col">
+          <HeroSection />
+        </div>
+      )}
+      
+      <Routes>
+        <Route path="/" element={<HomePageContent />} />
+        <Route path="/destinations" element={<TopDestination />} />
+        <Route path="/packages" element={<TourPackages />} />
+        <Route path="/destination/:id" element={<DestinationDetail />} />
+      </Routes>
+      
       <Footer />
     </div>
   );

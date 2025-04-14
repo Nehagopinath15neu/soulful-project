@@ -1,19 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/logo.png";
 
 const Header = () => {
   return (
     <header className="bg-white w-full">
       <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8">
-        <a href="/home-page" className="-m-1.5 p-1.5">
+        <Link to="/" className="-m-1.5 p-1.5">
           <span className="sr-only">Soulful Sojourns</span>
           <img
             className="custom-logo w-auto"
             src={logo}
-            alt="Soulful Sojournss"
+            alt="Soulful Sojourns"
             style={{ height: "65px" }}
           />
-        </a>
+        </Link>
 
         {/* Mobile menu button */}
         <div className="flex lg:hidden">
@@ -41,21 +42,21 @@ const Header = () => {
 
         {/* Desktop menu */}
         <div className="hidden lg:flex lg:gap-x-12">
-          <a href="/top-destination-page" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/destinations" className="text-sm font-semibold leading-6 text-gray-900">
             Top Destinations
-          </a>
-          <a href="/tour-package-page" className="text-sm font-semibold leading-6 text-gray-900">
+          </Link>
+          <Link to="/packages" className="text-sm font-semibold leading-6 text-gray-900">
             Tour Packages
-          </a>
-          <a href="/registration-form" className="text-sm font-semibold leading-6 text-gray-900">
+          </Link>
+          <Link to="/register" className="text-sm font-semibold leading-6 text-gray-900">
             Register
-          </a>
-          <a href="/contact-us-page" className="text-sm font-semibold leading-6 text-gray-900">
+          </Link>
+          <Link to="/contact" className="text-sm font-semibold leading-6 text-gray-900">
             Contact Us
-          </a>
-          <a href="/login-page" className="text-sm font-semibold leading-6 text-gray-900">
+          </Link>
+          <Link to="/login" className="text-sm font-semibold leading-6 text-gray-900">
             Log in →
-          </a>
+          </Link>
         </div>
       </nav>
     </header>
