@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -9,9 +10,9 @@ const Footer = () => {
           className="-mb-6 flex flex-wrap justify-center gap-x-12 gap-y-3 text-sm leading-6"
           aria-label="Footer"
         >
-          <a href="/about-us-page" className="text-gray-400 hover:text-white">
+          <Link to="/about" className="text-gray-400 hover:text-white">
             About
-          </a>
+          </Link>
           <a href="/blog-page" className="text-gray-400 hover:text-white">
             Blog
           </a>

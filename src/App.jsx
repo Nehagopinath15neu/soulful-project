@@ -42,6 +42,9 @@ import HomePageContent from "./pages/home";
 import TopDestination from "./pages/topdestination";
 import TourPackages from "./pages/tourpackages";
 import DestinationDetail from "./pages/destinationdetail";
+import Login from "./pages/login";
+import ForgotPassword from "./pages/forgotpassword";
+import About from "./pages/about";
 import Footer from "./components/footer";
 
 function App() {
@@ -63,6 +66,9 @@ function App() {
         <Route path="/destinations" element={<TopDestination />} />
         <Route path="/packages" element={<TourPackages />} />
         <Route path="/destination/:id" element={<DestinationDetail />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/forgot-password" element={<ForgotPassword />} />
+        <Route path="/about" element={<About />} />
       </Routes>
       
       <Footer />
