@@ -34,7 +34,7 @@
 
 // export default App
 import React from "react";
-import { Routes, Route, useLocation } from "react-router-dom";
+import { Routes, Route, useLocation, Link } from "react-router-dom";
 import Header from "./components/navbar";
 import Banner from "./components/banner";
 import HeroSection from "./components/herosection";
@@ -46,6 +46,10 @@ import Login from "./pages/login";
 import ForgotPassword from "./pages/forgotpassword";
 import About from "./pages/about";
 import Footer from "./components/footer";
+import Registration from "./pages/registration";
+import ContactUs from "./pages/contactus";
+import Signup from "./pages/signup";
+import Blog from "./pages/blog";
 
 function App() {
   const location = useLocation();
@@ -69,6 +73,10 @@ function App() {
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/about" element={<About />} />
+        <Route path="/registration" element={<Registration />} />
+        <Route path="/contactus" element={<ContactUs />} />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/blog" element={<Blog />} />
       </Routes>
       
       <Footer />

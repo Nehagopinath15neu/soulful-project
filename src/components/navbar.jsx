@@ -48,10 +48,10 @@ const Header = () => {
           <Link to="/packages" className="text-sm font-semibold leading-6 text-gray-900">
             Tour Packages
           </Link>
-          <Link to="/register" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/registration" className="text-sm font-semibold leading-6 text-gray-900">
             Register
           </Link>
-          <Link to="/contact" className="text-sm font-semibold leading-6 text-gray-900">
+          <Link to="/contactus" className="text-sm font-semibold leading-6 text-gray-900">
             Contact Us
           </Link>
           <Link to="/login" className="text-sm font-semibold leading-6 text-gray-900">
