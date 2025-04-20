@@ -28,7 +28,7 @@ const TopDestination = () => {
               alt: "Kyoto Temple",
               description:
                 "Immerse yourself in centuries of Japanese culture and tradition. Experience ancient temples, serene gardens, traditional tea ceremonies, and the breathtaking beauty of cherry blossoms in this historic imperial capital.",
-              link: "/kyoto-destination",
+              link: "/kyoto",
               linkText: "Explore Kyoto",
             },
             {

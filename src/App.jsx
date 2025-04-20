@@ -41,15 +41,14 @@ import HeroSection from "./components/herosection";
 import HomePageContent from "./pages/home";
 import TopDestination from "./pages/topdestination";
 import TourPackages from "./pages/tourpackages";
-import DestinationDetail from "./pages/destinationdetail";
 import Login from "./pages/login";
 import ForgotPassword from "./pages/forgotpassword";
 import About from "./pages/about";
-import Footer from "./components/footer";
 import Registration from "./pages/registration";
 import ContactUs from "./pages/contactus";
 import Signup from "./pages/signup";
 import Blog from "./pages/blog";
+import Footer from "./components/footer";
 
 function App() {
   const location = useLocation();
@@ -69,7 +68,6 @@ function App() {
         <Route path="/" element={<HomePageContent />} />
         <Route path="/destinations" element={<TopDestination />} />
         <Route path="/packages" element={<TourPackages />} />
-        <Route path="/destination/:id" element={<DestinationDetail />} />
         <Route path="/login" element={<Login />} />
         <Route path="/forgot-password" element={<ForgotPassword />} />
         <Route path="/about" element={<About />} />
