@@ -51,6 +51,7 @@ import Blog from "./pages/blog";
 import Footer from "./components/footer";
 import Review from "./pages/review";
 import Feedback from "./pages/feedback";
+import Kyoto from "./pages/kyoto";
 
 function App() {
   const location = useLocation();
@@ -68,6 +69,7 @@ function App() {
       
       <Routes>
         <Route path="/" element={<HomePageContent />} />
+        <Route path="/topdestination" element={<TopDestination />} />
         <Route path="/destinations" element={<TopDestination />} />
         <Route path="/packages" element={<TourPackages />} />
         <Route path="/login" element={<Login />} />
@@ -79,6 +81,7 @@ function App() {
         <Route path="/blog" element={<Blog />} />
         <Route path="/review" element={<Review />} />
         <Route path="/feedback" element={<Feedback />} />
+        <Route path="/kyoto" element={<Kyoto />} />
       </Routes>
       
       <Footer />

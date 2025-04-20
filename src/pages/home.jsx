@@ -90,7 +90,7 @@ const HomePageContent = () => {
             </h1>
             <div className="mt-4 sm:mt-6">
               <a
-                href="/top-destination-page"
+                href="/topdestination"
                 className="inline-block rounded-md border border-transparent bg-indigo-600 px-8 py-3 font-medium text-white hover:bg-indigo-700"
               >
                 Checkout!
@@ -103,9 +103,9 @@ const HomePageContent = () => {
           <h2 id="collection-heading" className="sr-only">Collections</h2>
           <div className="mx-auto grid max-w-md grid-cols-1 gap-y-6 px-4 sm:max-w-7xl sm:grid-cols-3 sm:gap-x-6 sm:gap-y-0 sm:px-6 lg:gap-x-8 lg:px-8">
             {[
-              { src: KyotoJapan, title: "Kyoto, Japan", link: "/kyoto-destination" },
-              { src: SantoriniGreece, title: "Santorini, Greece", link: "/santorini-destination" },
-              { src: SedonaArizonaUSA, title: "Sedona, Arizona, USA", link: "/sedona-destination" },
+              { src: KyotoJapan, title: "Kyoto, Japan", link: "/kyoto" },
+              { src: SantoriniGreece, title: "Santorini, Greece", link: "/santorini" },
+              { src: SedonaArizonaUSA, title: "Sedona, Arizona, USA", link: "/sedona" },
             ].map((item, index) => (
               <div key={index} className="group relative h-96 rounded-lg bg-white shadow-xl sm:aspect-[4/5] sm:h-auto">
                 <div aria-hidden="true" className="absolute inset-0 overflow-hidden rounded-lg">
