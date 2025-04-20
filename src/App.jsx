@@ -50,6 +50,7 @@ import Signup from "./pages/signup";
 import Blog from "./pages/blog";
 import Footer from "./components/footer";
 import Review from "./pages/review";
+import Feedback from "./pages/feedback";
 
 function App() {
   const location = useLocation();
@@ -77,6 +78,7 @@ function App() {
         <Route path="/signup" element={<Signup />} />
         <Route path="/blog" element={<Blog />} />
         <Route path="/review" element={<Review />} />
+        <Route path="/feedback" element={<Feedback />} />
       </Routes>
       
       <Footer />

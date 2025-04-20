@@ -22,7 +22,7 @@ const Footer = () => {
           <a href="/review" className="text-gray-400 hover:text-white">
             Reviews
           </a>
-          <a href="/feedback-page" className="text-gray-400 hover:text-white">
+          <a href="/feedback" className="text-gray-400 hover:text-white">
             Feedbacks
           </a>
         </nav>
