@@ -1,0 +1,289 @@
+{
+  "navbar": {
+    "home": "Inicio",
+    "destinations": "Nuestros Destinos",
+    "packages": "Paquetes Turísticos",
+    "register": "Registrarse",
+    "contact": "Contáctenos",
+    "login": "Iniciar Sesión"
+  },
+  "home": {
+    "hero": {
+      "title": "Descubre el mundo con Soulful Sojourns",
+      "subtitle": "Experiencias de viaje transformadoras que te conectan con el corazón de cada destino",
+      "cta": "Explorar Destinos"
+    },
+    "about": {
+      "title": "Acerca de Soulful Sojourns",
+      "description": "En Soulful Sojourns, creemos que viajar no se trata solo de lugares, sino de nuevas formas de ver las cosas. Dedicados a crear experiencias inmersivas, te conectamos con el corazón de cada destino. Únete a nosotros para viajes que enriquecen, inspiran y rejuvenecen."
+    },
+    "destinations": {
+      "title": "Destinos Principales de Soulful Sojourns",
+      "cta": "¡Descúbrelos!"
+    },
+    "testimonial": {
+      "quote": "Desde el momento en que comencé a planificar mi viaje con Soulful Sojourns, supe que me esperaba algo especial. Cada detalle fue manejado con cuidado, y los destinos fueron más impresionantes de lo que esperaba. Recomiendo ampliamente para cualquiera que busque conectarse verdaderamente con los lugares que visita."
+    }
+  },
+  "destinations": {
+    "title": "Nuestros Mejores Destinos",
+    "description": "Descubre la magia de estos destinos cuidadosamente seleccionados que prometen experiencias inolvidables.",
+    "kyoto": {
+      "title": "Kioto, Japón",
+      "description": "Sumérgete en siglos de cultura y tradición japonesa. Experimenta templos antiguos, jardines serenos, ceremonias tradicionales de té y la impresionante belleza de los cerezos en flor en esta histórica capital imperial.",
+      "cta": "Explorar Kioto"
+    },
+    "santorini": {
+      "title": "Santorini, Grecia",
+      "description": "Experimenta la magia del Mediterráneo en esta impresionante isla griega. Desde los icónicos edificios blancos y cúpulas azules hasta espectaculares puestas de sol, playas volcánicas y bodegas de clase mundial, Santorini ofrece una perfecta mezcla de romance y aventura.",
+      "cta": "Explorar Santorini"
+    },
+    "sedona": {
+      "title": "Sedona, Arizona",
+      "description": "Descubre el corazón espiritual del suroeste americano. Con sus impresionantes formaciones de roca roja, vórtices de energía y aventuras al aire libre sin fin, Sedona ofrece una combinación única de belleza natural, bienestar espiritual y emoción al aire libre.",
+      "cta": "Explorar Sedona"
+    },
+    "bali": {
+      "title": "Bali, Indonesia",
+      "description": "Descubre la Isla de los Dioses con sus exuberantes paisajes, templos antiguos y cultura vibrante. Desde playas vírgenes y terrazas de arroz hasta retiros espirituales y surf de clase mundial, Bali ofrece una perfecta combinación de relajación, aventura y despertar espiritual.",
+      "cta": "Explorar Bali"
+    },
+    "goa": {
+      "title": "Goa, India",
+      "description": "Experimenta la perfecta mezcla de culturas india y portuguesa en este paraíso costero. Con sus playas doradas, plantaciones de especias, arquitectura colonial y vibrante vida nocturna, Goa ofrece una experiencia de viaje única diferente a cualquier otro lugar en India.",
+      "cta": "Explorar Goa"
+    },
+    "paris": {
+      "title": "París, Francia",
+      "description": "Enamórate de la Ciudad de la Luz. Desde monumentos icónicos como la Torre Eiffel y el Louvre hasta encantadores cafés y cocina de clase mundial, París ofrece una perfecta mezcla de arte, historia, romance y excelencia culinaria en una atmósfera de elegancia atemporal.",
+      "cta": "Explorar París"
+    }
+  },
+  "reviews": {
+    "title": "Lo Que Dicen Nuestros Viajeros",
+    "stats": {
+      "rating": "Calificación Promedio",
+      "travelers": "Viajeros Felices",
+      "recommend": "Recomendarían",
+      "destinations": "Destinos"
+    },
+    "cta": {
+      "title": "¿Listo para Crear Tu Propia Historia?",
+      "packages": "Explorar Paquetes Turísticos",
+      "feedback": "Compartir Tu Experiencia"
+    }
+  },
+  "language": {
+    "select": "Seleccionar Idioma"
+  },
+  "packages": {
+    "title": "Paquetes Turísticos",
+    "kyoto": {
+      "title": "Experiencia Cultural de Kioto",
+      "description": "Sumérgete en el corazón de la cultura japonesa con nuestra experiencia de 7 días en Kioto. Desde $899 para dos personas, este viaje te lleva a través de templos antiguos, ceremonias tradicionales de té y la impresionante belleza de los cerezos en flor.",
+      "highlights": "Destacados del Paquete:",
+      "highlights_list": [
+        "Visitas guiadas a templos históricos incluyendo Kinkaku-ji y Fushimi Inari",
+        "Experiencia de ceremonia de té tradicional",
+        "Sesión de meditación en jardín Zen",
+        "Experiencia de vestir kimono",
+        "Clase de cocina local",
+        "Observación de cerezos en flor (estacional)"
+      ],
+      "details": "Detalles del Paquete:",
+      "duration": "Duración:",
+      "duration_value": "7 días, 6 noches",
+      "price": "Precio:",
+      "price_value": "Desde $899 para dos personas",
+      "price_additional": "Huéspedes adicionales: +$299 por persona",
+      "accommodation": "Alojamiento:",
+      "accommodation_value": "Ryokan tradicional y hoteles modernos",
+      "itinerary": "Itinerario Diario",
+      "day1": "Día 1: Llegada y Bienvenida",
+      "day2": "Día 2: Templos Antiguos y Ceremonia de Té",
+      "day3": "Día 3: Inmersión Cultural",
+      "day4": "Día 4: Sitios Sagrados",
+      "day5": "Día 5: Naturaleza y Jardines",
+      "day6": "Día 6: Arte e Historia",
+      "day7": "Día 7: Partida",
+      "day1_items": {
+        "item1": "Recogida en el aeropuerto y traslado al ryokan tradicional",
+        "item2": "Cena de bienvenida con cocina estacional de Kioto",
+        "item3": "Orientación nocturna y descripción general del viaje"
+      },
+      "day2_items": {
+        "item1": "Visita matutina a Kinkaku-ji (Pabellón Dorado)",
+        "item2": "Experiencia de ceremonia de té tradicional",
+        "item3": "Tarde en el Templo Ryoan-ji y jardín de rocas",
+        "item4": "Paseo nocturno por el histórico distrito de Gion"
+      },
+      "day3_items": {
+        "item1": "Prueba y experiencia de vestir kimono",
+        "item2": "Clase de cocina japonesa con chef local",
+        "item3": "Visita a talleres de artesanía local",
+        "item4": "Sesión de meditación nocturna"
+      },
+      "day4_items": {
+        "item1": "Visita temprana al Santuario Fushimi Inari",
+        "item2": "Exploración del Bosque de Bambú en Arashiyama",
+        "item3": "Meditación Zen en templo local",
+        "item4": "Actuación de música tradicional"
+      },
+      "day5_items": {
+        "item1": "Observación de cerezos en flor (estacional)",
+        "item2": "Visita a los jardines del palacio imperial",
+        "item3": "Taller de diseño de jardines tradicionales",
+        "item4": "Cena kaiseki nocturna"
+      },
+      "day6_items": {
+        "item1": "Visita al Castillo Nijo",
+        "item2": "Taller de artes tradicionales (caligrafía/origami)",
+        "item3": "Visitas a museos",
+        "item4": "Cena de despedida con actuación de maiko"
+      },
+      "day7_items": {
+        "item1": "Mañana libre para compras",
+        "item2": "Visita opcional al mercado local",
+        "item3": "Traslado al aeropuerto"
+      }
+    },
+    "santorini": {
+      "title": "Escape a la Isla de Santorini",
+      "description": "Experimenta la magia del Mediterráneo con nuestro paquete de 6 días en Santorini. Desde $1,099 para dos personas, esta escapada romántica presenta impresionantes puestas de sol, pueblos blancos, aguas cristalinas y exquisitos vinos locales.",
+      "highlights": "Destacados del Paquete:",
+      "highlights_list": [
+        "Vista de la puesta de sol en Oia",
+        "Excursiones a la Playa Roja y Playa Negra",
+        "Tour de degustación de vinos en viñedos locales",
+        "Crucero en catamarán con natación y snorkel",
+        "Clase de cocina griega tradicional",
+        "Visita guiada a la antigua Akrotiri"
+      ],
+      "details": "Detalles del Paquete:",
+      "duration": "Duración:",
+      "duration_value": "6 días, 5 noches",
+      "price": "Precio:",
+      "price_value": "Desde $1,099 para dos personas",
+      "price_additional": "Huéspedes adicionales: +$349 por persona",
+      "accommodation": "Alojamiento:",
+      "accommodation_value": "Hoteles boutique con vistas a la caldera",
+      "day1": "Día 1: Bienvenido al Paraíso",
+      "day2": "Día 2: Exploración de la Isla",
+      "day3": "Día 3: Mar y Sol",
+      "day4": "Día 4: Cultura e Historia",
+      "day5": "Día 5: Despedida",
+      "day1_items": {
+        "item1": "Recogida en el aeropuerto y traslado panorámico al hotel",
+        "item2": "Bebida de bienvenida en mirador al atardecer",
+        "item3": "Cena griega tradicional en Oia"
+      },
+      "day2_items": {
+        "item1": "Tour matutino a pie por Oia",
+        "item2": "Visita a iglesias de cúpulas azules",
+        "item3": "Experiencia de cata de vinos por la tarde",
+        "item4": "Sesión de fotografía al atardecer"
+      },
+      "day3_items": {
+        "item1": "Crucero en catamarán alrededor de la caldera",
+        "item2": "Natación en aguas termales volcánicas",
+        "item3": "Almuerzo barbacoa en la playa",
+        "item4": "Clase de cocina nocturna con chef local"
+      },
+      "day4_items": {
+        "item1": "Visita al sitio arqueológico de Akrotiri",
+        "item2": "Exploración de la Playa Roja",
+        "item3": "Tour por pueblo tradicional",
+        "item4": "Cena privada con vista a la caldera"
+      },
+      "day5_items": {
+        "item1": "Mañana libre",
+        "item2": "Tratamiento de spa opcional",
+        "item3": "Traslado al aeropuerto"
+      }
+    },
+    "sedona": {
+      "title": "Viaje Espiritual a Sedona",
+      "description": "Conéctate con la naturaleza y contigo mismo en nuestro retiro de 5 días en Sedona. Desde $799 para dos personas, esta experiencia transformadora combina aventuras al aire libre con prácticas espirituales en medio de impresionantes paisajes de roca roja.",
+      "highlights": "Destacados del Paquete:",
+      "highlights_list": [
+        "Sesiones de meditación en vórtices de energía",
+        "Senderismo guiado a través de formaciones de roca roja",
+        "Yoga al amanecer en la naturaleza",
+        "Experiencia en globo aerostático",
+        "Experiencia cultural nativa americana",
+        "Observación de estrellas y fotografía nocturna"
+      ],
+      "details": "Detalles del Paquete:",
+      "duration": "Duración:",
+      "duration_value": "5 días, 4 noches",
+      "price": "Precio:",
+      "price_value": "Desde $799 para dos personas",
+      "price_additional": "Huéspedes adicionales: +$249 por persona",
+      "accommodation": "Alojamiento:",
+      "accommodation_value": "Resorts ecológicos y alojamientos con spa"
+    },
+    "bali": {
+      "title": "Retiro de Bienestar en Bali",
+      "description": "Rejuvenece tu cuerpo y alma con nuestro viaje de bienestar de 8 días en Bali. Desde $1,199 para dos personas, sumérgete en la espiritualidad balinesa, paisajes exuberantes y tradiciones de sanación holística.",
+      "highlights": "Destacados del Paquete:",
+      "highlights_list": [
+        "Sesiones diarias de yoga y meditación",
+        "Ceremonias tradicionales de sanación balinesa",
+        "Visitas a templos y rituales de bendición",
+        "Caminata por terrazas de arroz",
+        "Clase de cocina balinesa",
+        "Tratamientos de spa y consultas de bienestar"
+      ],
+      "details": "Detalles del Paquete:",
+      "duration": "Duración:",
+      "duration_value": "8 días, 7 noches",
+      "price": "Precio:",
+      "price_value": "Desde $1,199 para dos personas",
+      "price_additional": "Huéspedes adicionales: +$399 por persona",
+      "accommodation": "Alojamiento:",
+      "accommodation_value": "Villas de lujo y retiros boutique"
+    },
+    "goa": {
+      "title": "Escape Cultural y Playero de Goa",
+      "description": "Experimenta la perfecta combinación de relajación e inmersión cultural con nuestro paquete de 6 días en Goa. Desde $699 para dos personas, disfruta de playas doradas, herencia portuguesa y vibrante cultura local.",
+      "highlights": "Destacados del Paquete:",
+      "highlights_list": [
+        "Relajación en playas privadas premium",
+        "Paseo por el patrimonio de la Vieja Goa",
+        "Tour y degustación en plantación de especias",
+        "Clase de cocina tradicional de Goa",
+        "Crucero al atardecer con cena",
+        "Exploración de mercados locales"
+      ],
+      "details": "Detalles del Paquete:",
+      "duration": "Duración:",
+      "duration_value": "6 días, 5 noches",
+      "price": "Precio:",
+      "price_value": "Desde $699 para dos personas",
+      "price_additional": "Huéspedes adicionales: +$199 por persona",
+      "accommodation": "Alojamiento:",
+      "accommodation_value": "Resorts de playa y hoteles históricos"
+    },
+    "paris": {
+      "title": "Romance y Cultura de París",
+      "description": "Enamórate de la Ciudad de la Luz con nuestra experiencia de 7 días en París. Desde $1,299 para dos personas, descubre monumentos icónicos, gastronomía de clase mundial y la elegancia atemporal que hace de París un lugar inolvidable.",
+      "highlights": "Destacados del Paquete:",
+      "highlights_list": [
+        "Tour privado guiado del Louvre",
+        "Crucero con cena por el río Sena",
+        "Paseo artístico por Montmartre y taller",
+        "Degustación de pastelería y vinos franceses",
+        "Excursión de un día a Versalles",
+        "Noche en el Moulin Rouge"
+      ],
+      "details": "Detalles del Paquete:",
+      "duration": "Duración:",
+      "duration_value": "7 días, 6 noches",
+      "price": "Precio:",
+      "price_value": "Desde $1,299 para dos personas",
+      "price_additional": "Huéspedes adicionales: +$449 por persona",
+      "accommodation": "Alojamiento:",
+      "accommodation_value": "Hoteles boutique en el centro de París"
+    }
+  }
+}

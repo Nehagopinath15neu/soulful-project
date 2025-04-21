@@ -1,0 +1,289 @@
+{
+  "navbar": {
+    "home": "Home",
+    "destinations": "Our Destinations",
+    "packages": "Tour Packages",
+    "register": "Register",
+    "contact": "Contact Us",
+    "login": "Log in"
+  },
+  "home": {
+    "hero": {
+      "title": "Discover the world with Soulful Sojourns",
+      "subtitle": "Transformative travel experiences that connect you with the heart of each destination",
+      "cta": "Explore Destinations"
+    },
+    "about": {
+      "title": "About Soulful Sojourns",
+      "description": "At Soulful Sojourns, we believe travel is not just about places, but about new ways of seeing things. Dedicated to crafting immersive experiences, we connect you with the heart of each destination. Join us for journeys that enrich, inspire, and rejuvenate."
+    },
+    "destinations": {
+      "title": "Top Destinations of Soulful Sojourns",
+      "cta": "Checkout!"
+    },
+    "testimonial": {
+      "quote": "From the moment I started planning my trip with Soulful Sojourns, I knew I was in for something special. Every detail was handled with care, and the destinations were beyond breathtaking. Highly recommend for anyone looking to truly connect with the places they visit."
+    }
+  },
+  "destinations": {
+    "title": "Our Top Destinations",
+    "description": "Discover the magic of these carefully curated destinations that promise unforgettable experiences.",
+    "kyoto": {
+      "title": "Kyoto, Japan",
+      "description": "Immerse yourself in centuries of Japanese culture and tradition. Experience ancient temples, serene gardens, traditional tea ceremonies, and the breathtaking beauty of cherry blossoms in this historic imperial capital.",
+      "cta": "Explore Kyoto"
+    },
+    "santorini": {
+      "title": "Santorini, Greece",
+      "description": "Experience the magic of the Mediterranean in this stunning Greek island. From iconic white-washed buildings and blue domes to spectacular sunsets, volcanic beaches, and world-class wineries, Santorini offers a perfect blend of romance and adventure.",
+      "cta": "Explore Santorini"
+    },
+    "sedona": {
+      "title": "Sedona, Arizona",
+      "description": "Discover the spiritual heart of the American Southwest. With its stunning red rock formations, energy vortexes, and endless outdoor adventures, Sedona offers a unique blend of natural beauty, spiritual wellness, and outdoor excitement.",
+      "cta": "Explore Sedona"
+    },
+    "bali": {
+      "title": "Bali, Indonesia",
+      "description": "Discover the Island of the Gods with its lush landscapes, ancient temples, and vibrant culture. From pristine beaches and terraced rice fields to spiritual retreats and world-class surfing, Bali offers a perfect blend of relaxation, adventure, and spiritual awakening.",
+      "cta": "Explore Bali"
+    },
+    "goa": {
+      "title": "Goa, India",
+      "description": "Experience the perfect blend of Indian and Portuguese cultures in this coastal paradise. With its golden beaches, spice plantations, colonial architecture, and vibrant nightlife, Goa offers a unique travel experience unlike anywhere else in India.",
+      "cta": "Explore Goa"
+    },
+    "paris": {
+      "title": "Paris, France",
+      "description": "Fall in love with the City of Light. From iconic landmarks like the Eiffel Tower and Louvre to charming cafés and world-class cuisine, Paris offers a perfect blend of art, history, romance, and culinary excellence in an atmosphere of timeless elegance.",
+      "cta": "Explore Paris"
+    }
+  },
+  "reviews": {
+    "title": "What Our Travelers Say",
+    "stats": {
+      "rating": "Average Rating",
+      "travelers": "Happy Travelers",
+      "recommend": "Would Recommend",
+      "destinations": "Destinations"
+    },
+    "cta": {
+      "title": "Ready to Create Your Own Story?",
+      "packages": "Explore Tour Packages",
+      "feedback": "Share Your Experience"
+    }
+  },
+  "language": {
+    "select": "Select Language"
+  },
+  "packages": {
+    "title": "Tour Packages",
+    "kyoto": {
+      "title": "Kyoto Cultural Experience",
+      "description": "Immerse yourself in the heart of Japanese culture with our 7-day Kyoto experience. Starting at $899 for two people, this journey takes you through ancient temples, traditional tea ceremonies, and the breathtaking beauty of cherry blossoms.",
+      "highlights": "Package Highlights:",
+      "highlights_list": [
+        "Guided tours of historic temples including Kinkaku-ji and Fushimi Inari",
+        "Traditional tea ceremony experience",
+        "Zen garden meditation session",
+        "Kimono wearing experience",
+        "Local cuisine cooking class",
+        "Cherry blossom viewing (seasonal)"
+      ],
+      "details": "Package Details:",
+      "duration": "Duration:",
+      "duration_value": "7 days, 6 nights",
+      "price": "Price:",
+      "price_value": "Starting at $899 for two people",
+      "price_additional": "Additional guests: +$299 per person",
+      "accommodation": "Accommodation:",
+      "accommodation_value": "Traditional ryokan and modern hotel stays",
+      "itinerary": "Daily Itinerary",
+      "day1": "Day 1: Arrival & Welcome",
+      "day2": "Day 2: Ancient Temples & Tea Ceremony",
+      "day3": "Day 3: Cultural Immersion",
+      "day4": "Day 4: Sacred Sites",
+      "day5": "Day 5: Nature & Gardens",
+      "day6": "Day 6: Art & History",
+      "day7": "Day 7: Departure",
+      "day1_items": {
+        "item1": "Airport pickup and transfer to traditional ryokan",
+        "item2": "Welcome dinner featuring seasonal Kyoto cuisine",
+        "item3": "Evening orientation and trip overview"
+      },
+      "day2_items": {
+        "item1": "Morning visit to Kinkaku-ji (Golden Pavilion)",
+        "item2": "Traditional tea ceremony experience",
+        "item3": "Afternoon at Ryoan-ji Temple and rock garden",
+        "item4": "Evening walk through historic Gion district"
+      },
+      "day3_items": {
+        "item1": "Kimono fitting and wearing experience",
+        "item2": "Japanese cooking class with local chef",
+        "item3": "Visit to local craft workshops",
+        "item4": "Evening meditation session"
+      },
+      "day4_items": {
+        "item1": "Early morning visit to Fushimi Inari Shrine",
+        "item2": "Bamboo Grove exploration in Arashiyama",
+        "item3": "Zen meditation at local temple",
+        "item4": "Traditional music performance"
+      },
+      "day5_items": {
+        "item1": "Cherry blossom viewing (seasonal)",
+        "item2": "Visit to imperial palace gardens",
+        "item3": "Traditional garden design workshop",
+        "item4": "Evening kaiseki dinner"
+      },
+      "day6_items": {
+        "item1": "Visit to Nijo Castle",
+        "item2": "Traditional arts workshop (calligraphy/origami)",
+        "item3": "Museum visits",
+        "item4": "Farewell dinner with maiko performance"
+      },
+      "day7_items": {
+        "item1": "Morning free for shopping",
+        "item2": "Optional visit to local market",
+        "item3": "Airport transfer"
+      }
+    },
+    "santorini": {
+      "title": "Santorini Island Escape",
+      "description": "Experience the magic of the Mediterranean with our 6-day Santorini package. Starting at $1,099 for two people, this romantic getaway features stunning sunsets, white-washed villages, crystal blue waters, and exquisite local wines.",
+      "highlights": "Package Highlights:",
+      "highlights_list": [
+        "Sunset viewing in Oia",
+        "Red Beach and Black Beach excursions",
+        "Wine tasting tour of local vineyards",
+        "Catamaran cruise with swimming and snorkeling",
+        "Traditional Greek cooking class",
+        "Guided tour of ancient Akrotiri"
+      ],
+      "details": "Package Details:",
+      "duration": "Duration:",
+      "duration_value": "6 days, 5 nights",
+      "price": "Price:",
+      "price_value": "Starting at $1,099 for two people",
+      "price_additional": "Additional guests: +$349 per person",
+      "accommodation": "Accommodation:",
+      "accommodation_value": "Boutique hotels with caldera views",
+      "day1": "Day 1: Welcome to Paradise",
+      "day2": "Day 2: Island Exploration",
+      "day3": "Day 3: Sea & Sun",
+      "day4": "Day 4: Culture & History",
+      "day5": "Day 5: Farewell",
+      "day1_items": {
+        "item1": "Airport pickup and scenic transfer to hotel",
+        "item2": "Welcome drink at sunset viewpoint",
+        "item3": "Traditional Greek dinner in Oia"
+      },
+      "day2_items": {
+        "item1": "Morning walking tour of Oia",
+        "item2": "Visit to blue-domed churches",
+        "item3": "Afternoon wine tasting experience",
+        "item4": "Sunset photography session"
+      },
+      "day3_items": {
+        "item1": "Catamaran cruise around the caldera",
+        "item2": "Swimming at volcanic hot springs",
+        "item3": "Beach BBQ lunch",
+        "item4": "Evening cooking class with local chef"
+      },
+      "day4_items": {
+        "item1": "Visit to Akrotiri archaeological site",
+        "item2": "Red Beach exploration",
+        "item3": "Traditional village tour",
+        "item4": "Private caldera view dinner"
+      },
+      "day5_items": {
+        "item1": "Morning at leisure",
+        "item2": "Optional spa treatment",
+        "item3": "Airport transfer"
+      }
+    },
+    "sedona": {
+      "title": "Sedona Spiritual Journey",
+      "description": "Connect with nature and yourself on our 5-day Sedona retreat. Starting at $799 for two people, this transformative experience combines outdoor adventures with spiritual practices amidst the stunning red rock landscapes.",
+      "highlights": "Package Highlights:",
+      "highlights_list": [
+        "Energy vortex meditation sessions",
+        "Guided hiking through red rock formations",
+        "Sunrise yoga in nature",
+        "Hot air balloon experience",
+        "Native American cultural experience",
+        "Stargazing and night sky photography"
+      ],
+      "details": "Package Details:",
+      "duration": "Duration:",
+      "duration_value": "5 days, 4 nights",
+      "price": "Price:",
+      "price_value": "Starting at $799 for two people",
+      "price_additional": "Additional guests: +$249 per person",
+      "accommodation": "Accommodation:",
+      "accommodation_value": "Eco-friendly resorts and spa lodges"
+    },
+    "bali": {
+      "title": "Bali Wellness Retreat",
+      "description": "Rejuvenate your body and soul with our 8-day Bali wellness journey. Starting at $1,199 for two people, immerse yourself in Balinese spirituality, lush landscapes, and holistic healing traditions.",
+      "highlights": "Package Highlights:",
+      "highlights_list": [
+        "Daily yoga and meditation sessions",
+        "Traditional Balinese healing ceremonies",
+        "Temple visits and blessing rituals",
+        "Rice terrace trekking",
+        "Balinese cooking class",
+        "Spa treatments and wellness consultations"
+      ],
+      "details": "Package Details:",
+      "duration": "Duration:",
+      "duration_value": "8 days, 7 nights",
+      "price": "Price:",
+      "price_value": "Starting at $1,199 for two people",
+      "price_additional": "Additional guests: +$399 per person",
+      "accommodation": "Accommodation:",
+      "accommodation_value": "Luxury villas and boutique retreats"
+    },
+    "goa": {
+      "title": "Goa Cultural & Beach Escape",
+      "description": "Experience the perfect blend of relaxation and cultural immersion with our 6-day Goa package. Starting at $699 for two people, enjoy golden beaches, Portuguese heritage, and vibrant local culture.",
+      "highlights": "Package Highlights:",
+      "highlights_list": [
+        "Beach relaxation at premium private beaches",
+        "Heritage walk through Old Goa",
+        "Spice plantation tour and tasting",
+        "Traditional Goan cooking class",
+        "Sunset cruise with dinner",
+        "Local market exploration"
+      ],
+      "details": "Package Details:",
+      "duration": "Duration:",
+      "duration_value": "6 days, 5 nights",
+      "price": "Price:",
+      "price_value": "Starting at $699 for two people",
+      "price_additional": "Additional guests: +$199 per person",
+      "accommodation": "Accommodation:",
+      "accommodation_value": "Beach resorts and heritage hotels"
+    },
+    "paris": {
+      "title": "Paris Romance & Culture",
+      "description": "Fall in love with the City of Light on our 7-day Paris experience. Starting at $1,299 for two people, discover iconic landmarks, world-class cuisine, and the timeless elegance that makes Paris unforgettable.",
+      "highlights": "Package Highlights:",
+      "highlights_list": [
+        "Private guided tour of the Louvre",
+        "Seine River dinner cruise",
+        "Montmartre art walk and workshop",
+        "French pastry and wine tasting",
+        "Day trip to Versailles",
+        "Evening at the Moulin Rouge"
+      ],
+      "details": "Package Details:",
+      "duration": "Duration:",
+      "duration_value": "7 days, 6 nights",
+      "price": "Price:",
+      "price_value": "Starting at $1,299 for two people",
+      "price_additional": "Additional guests: +$449 per person",
+      "accommodation": "Accommodation:",
+      "accommodation_value": "Boutique hotels in central Paris"
+    }
+  }
+}

@@ -1,8 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import CTAButton from '../common/CTAButton';
 
 const AboutSection = ({ image, title, description }) => {
+  const { t } = useTranslation();
   return (
     <div className="relative bg-gray-900">
       <div className="relative h-80 overflow-hidden bg-indigo-600 md:absolute md:left-0 md:h-full md:w-1/3 lg:w-1/2">
@@ -42,7 +44,7 @@ const AboutSection = ({ image, title, description }) => {
           </p>
           <div className="mt-8">
             <CTAButton to="/about" variant="secondary">
-              Know More
+              {t('home.about.cta', 'Know More')}
             </CTAButton>
           </div>
         </div>

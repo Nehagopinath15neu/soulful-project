@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 import logo from "../assets/images/logo.png";
+import LanguageSelector from "./LanguageSelector";
 
 const Header = () => {
+  const { t } = useTranslation();
   return (
     <header className="bg-white w-full">
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-2 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 py-2 lg:pr-1">
         <Link to="/" className="-m-1.5 p-1.5">
           <span className="sr-only">Soulful Sojourns</span>
           <img
@@ -41,22 +44,29 @@ const Header = () => {
         </div>
 
         {/* Desktop menu */}
-        <div className="hidden lg:flex lg:gap-x-12 lg:ml-auto">
-          <Link to="/destinations" className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out">
-            Our Destinations
-          </Link>
-          <Link to="/packages" className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out">
-            Tour Packages
-          </Link>
-          <Link to="/registration" className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out">
-            Register
-          </Link>
-          <Link to="/contactus" className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out">
-            Contact Us
-          </Link>
-          <Link to="/login" className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out">
-            Log in →
-          </Link>
+        <div className="hidden lg:flex lg:gap-x-6 lg:ml-auto lg:items-center lg:justify-end lg:flex-1">
+          <div className="flex gap-x-6 items-center">
+            <Link to="/destinations" className="text-sm font-semibold text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out flex items-center">
+              {t('navbar.destinations')}
+            </Link>
+            <Link to="/packages" className="text-sm font-semibold text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out flex items-center">
+              {t('navbar.packages')}
+            </Link>
+            <Link to="/registration" className="text-sm font-semibold text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out flex items-center">
+              {t('navbar.register')}
+            </Link>
+            <Link to="/contactus" className="text-sm font-semibold text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out flex items-center">
+              {t('navbar.contact')}
+            </Link>
+            <Link to="/login" className="text-sm font-semibold text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out flex items-center">
+              {t('navbar.login')} →
+            </Link>
+          </div>
+          
+          {/* Language Selector */}
+          <div className="ml-2 flex items-center">
+            <LanguageSelector />
+          </div>
         </div>
       </nav>
     </header>

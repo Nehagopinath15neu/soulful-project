@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
 
 // Import images
 import kyotoImage from "../assets/images/Kyoto-Japan.png";
@@ -48,6 +49,7 @@ import parisCuisine from "../assets/images/best-french-food.jpg";
 import montmartre from "../assets/images/Montmarte.jpeg";
 
 const TourPackages = () => {
+  const { t } = useTranslation();
   return (
     <main className="bg-white flex-grow">
       {/* Tour Packages Section */}
@@ -57,19 +59,16 @@ const TourPackages = () => {
           <div className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-3 sm:h-64">
             <img src={kyotoImage} alt="Kyoto temples and cherry blossoms" className="h-full w-full object-cover object-center" />
           </div>
-          <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">Kyoto Cultural Experience</h2>
+          <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">{t('packages.kyoto.title')}</h2>
           <div className="mt-4 grid grid-cols-1 gap-8 lg:grid-cols-2">
             <div>
-              <p className="text-lg text-gray-600 mb-6">Immerse yourself in the heart of Japanese culture with our 7-day Kyoto experience. Starting at $899 for two people, this journey takes you through ancient temples, traditional tea ceremonies, and the breathtaking beauty of cherry blossoms.</p>
+              <p className="text-lg text-gray-600 mb-6">{t('packages.kyoto.description')}</p>
               
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Package Highlights:</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('packages.kyoto.highlights')}</h3>
               <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li>Guided tours of historic temples including Kinkaku-ji and Fushimi Inari</li>
-                <li>Traditional tea ceremony experience</li>
-                <li>Zen garden meditation session</li>
-                <li>Kimono wearing experience</li>
-                <li>Local cuisine cooking class</li>
-                <li>Cherry blossom viewing (seasonal)</li>
+                {t('packages.kyoto.highlights_list', { returnObjects: true }).map((highlight, index) => (
+                  <li key={index}>{highlight}</li>
+                ))}
               </ul>
             </div>
             
@@ -77,16 +76,16 @@ const TourPackages = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Package Details:</h3>
               <dl className="space-y-4">
                 <div>
-                  <dt className="font-medium text-gray-900">Duration:</dt>
-                  <dd className="text-gray-600">7 days, 6 nights</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.kyoto.duration')}</dt>
+                  <dd className="text-gray-600">{t('packages.kyoto.duration_value')}</dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-900">Price:</dt>
-                  <dd className="text-gray-600">Starting at $899 for two people<br />Additional guests: +$299 per person</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.kyoto.price')}</dt>
+                  <dd className="text-gray-600">{t('packages.kyoto.price_value')}<br />{t('packages.kyoto.price_additional')}</dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-900">Accommodation:</dt>
-                  <dd className="text-gray-600">Traditional ryokan and modern hotel stays</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.kyoto.accommodation')}</dt>
+                  <dd className="text-gray-600">{t('packages.kyoto.accommodation_value')}</dd>
                 </div>
               </dl>
             </div>
@@ -94,82 +93,82 @@ const TourPackages = () => {
 
           {/* Kyoto Detailed Itinerary */}
           <div className="mt-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Daily Itinerary</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">{t('packages.kyoto.itinerary')}</h3>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
               {/* Left side: Daily Itinerary */}
               <div className="lg:col-span-6 space-y-6">
                 {/* Day 1 */}
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 1: Arrival & Welcome</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.kyoto.day1')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Airport pickup and transfer to traditional ryokan</li>
-                    <li>Welcome dinner featuring seasonal Kyoto cuisine</li>
-                    <li>Evening orientation and trip overview</li>
+                    <li>{t('packages.kyoto.day1_items.item1')}</li>
+                    <li>{t('packages.kyoto.day1_items.item2')}</li>
+                    <li>{t('packages.kyoto.day1_items.item3')}</li>
                   </ul>
                 </div>
 
                 {/* Day 2 */}
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 2: Ancient Temples & Tea Ceremony</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.kyoto.day2')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Morning visit to Kinkaku-ji (Golden Pavilion)</li>
-                    <li>Traditional tea ceremony experience</li>
-                    <li>Afternoon at Ryoan-ji Temple and rock garden</li>
-                    <li>Evening walk through historic Gion district</li>
+                    <li>{t('packages.kyoto.day2_items.item1')}</li>
+                    <li>{t('packages.kyoto.day2_items.item2')}</li>
+                    <li>{t('packages.kyoto.day2_items.item3')}</li>
+                    <li>{t('packages.kyoto.day2_items.item4')}</li>
                   </ul>
                 </div>
 
                 {/* Day 3 */}
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 3: Cultural Immersion</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.kyoto.day3')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Kimono fitting and wearing experience</li>
-                    <li>Japanese cooking class with local chef</li>
-                    <li>Visit to local craft workshops</li>
-                    <li>Evening meditation session</li>
+                    <li>{t('packages.kyoto.day3_items.item1')}</li>
+                    <li>{t('packages.kyoto.day3_items.item2')}</li>
+                    <li>{t('packages.kyoto.day3_items.item3')}</li>
+                    <li>{t('packages.kyoto.day3_items.item4')}</li>
                   </ul>
                 </div>
 
                 {/* Day 4 */}
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 4: Sacred Sites</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.kyoto.day4')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Early morning visit to Fushimi Inari Shrine</li>
-                    <li>Bamboo Grove exploration in Arashiyama</li>
-                    <li>Zen meditation at local temple</li>
-                    <li>Traditional music performance</li>
+                    <li>{t('packages.kyoto.day4_items.item1')}</li>
+                    <li>{t('packages.kyoto.day4_items.item2')}</li>
+                    <li>{t('packages.kyoto.day4_items.item3')}</li>
+                    <li>{t('packages.kyoto.day4_items.item4')}</li>
                   </ul>
                 </div>
 
                 {/* Day 5 */}
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 5: Nature & Gardens</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.kyoto.day5')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Cherry blossom viewing (seasonal)</li>
-                    <li>Visit to imperial palace gardens</li>
-                    <li>Traditional garden design workshop</li>
-                    <li>Evening kaiseki dinner</li>
+                    <li>{t('packages.kyoto.day5_items.item1')}</li>
+                    <li>{t('packages.kyoto.day5_items.item2')}</li>
+                    <li>{t('packages.kyoto.day5_items.item3')}</li>
+                    <li>{t('packages.kyoto.day5_items.item4')}</li>
                   </ul>
                 </div>
 
                 {/* Day 6 */}
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 6: Art & History</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.kyoto.day6')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Visit to Nijo Castle</li>
-                    <li>Traditional arts workshop (calligraphy/origami)</li>
-                    <li>Museum visits</li>
-                    <li>Farewell dinner with maiko performance</li>
+                    <li>{t('packages.kyoto.day6_items.item1')}</li>
+                    <li>{t('packages.kyoto.day6_items.item2')}</li>
+                    <li>{t('packages.kyoto.day6_items.item3')}</li>
+                    <li>{t('packages.kyoto.day6_items.item4')}</li>
                   </ul>
                 </div>
 
                 {/* Day 7 */}
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 7: Departure</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.kyoto.day7')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Morning free for shopping</li>
-                    <li>Optional visit to local market</li>
-                    <li>Airport transfer</li>
+                    <li>{t('packages.kyoto.day7_items.item1')}</li>
+                    <li>{t('packages.kyoto.day7_items.item2')}</li>
+                    <li>{t('packages.kyoto.day7_items.item3')}</li>
                   </ul>
                 </div>
               </div>
@@ -208,19 +207,16 @@ const TourPackages = () => {
           <div className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-3 sm:h-64">
             <img src={santoriniImage} alt="Santorini white buildings and blue domes" className="h-full w-full object-cover object-center" />
           </div>
-          <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">Santorini Island Paradise</h2>
+          <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">{t('packages.santorini.title')}</h2>
           <div className="mt-4 grid grid-cols-1 gap-8 lg:grid-cols-2">
             <div>
-              <p className="text-lg text-gray-600 mb-6">Experience the magic of the Mediterranean with our 5-day Santorini getaway. Starting at $899 for two people, enjoy stunning sunsets, white-washed villages, and crystal-clear waters.</p>
+              <p className="text-lg text-gray-600 mb-6">{t('packages.santorini.description')}</p>
               
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Package Highlights:</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('packages.santorini.highlights')}</h3>
               <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li>Sunset catamaran cruise</li>
-                <li>Wine tasting at local vineyards</li>
-                <li>Private caldera view dinner</li>
-                <li>Walking tour of Oia and Fira</li>
-                <li>Beach day at Red Beach</li>
-                <li>Greek cooking class</li>
+                {t('packages.santorini.highlights_list', { returnObjects: true }).map((highlight, index) => (
+                  <li key={index}>{highlight}</li>
+                ))}
               </ul>
             </div>
             
@@ -228,16 +224,16 @@ const TourPackages = () => {
               <h3 className="text-xl font-semibold text-gray-900 mb-4">Package Details:</h3>
               <dl className="space-y-4">
                 <div>
-                  <dt className="font-medium text-gray-900">Duration:</dt>
-                  <dd className="text-gray-600">5 days, 4 nights</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.santorini.duration')}</dt>
+                  <dd className="text-gray-600">{t('packages.santorini.duration_value')}</dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-900">Price:</dt>
-                  <dd className="text-gray-600">Starting at $899 for two people<br />Additional guests: +$299 per person</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.santorini.price')}</dt>
+                  <dd className="text-gray-600">{t('packages.santorini.price_value')}<br />{t('packages.santorini.price_additional')}</dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-900">Accommodation:</dt>
-                  <dd className="text-gray-600">Boutique hotel with caldera views</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.santorini.accommodation')}</dt>
+                  <dd className="text-gray-600">{t('packages.santorini.accommodation_value')}</dd>
                 </div>
               </dl>
             </div>
@@ -245,55 +241,55 @@ const TourPackages = () => {
 
           {/* Santorini Detailed Itinerary */}
           <div className="mt-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Daily Itinerary</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">{t('packages.kyoto.itinerary')}</h3>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
               {/* Left side: Daily Itinerary */}
               <div className="lg:col-span-6 space-y-6">
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 1: Welcome to Paradise</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.santorini.day1')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Airport pickup and scenic transfer to hotel</li>
-                    <li>Welcome drink at sunset viewpoint</li>
-                    <li>Traditional Greek dinner in Oia</li>
+                    <li>{t('packages.santorini.day1_items.item1')}</li>
+                    <li>{t('packages.santorini.day1_items.item2')}</li>
+                    <li>{t('packages.santorini.day1_items.item3')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 2: Island Exploration</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.santorini.day2')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Morning walking tour of Oia</li>
-                    <li>Visit to blue-domed churches</li>
-                    <li>Afternoon wine tasting experience</li>
-                    <li>Sunset photography session</li>
+                    <li>{t('packages.santorini.day2_items.item1')}</li>
+                    <li>{t('packages.santorini.day2_items.item2')}</li>
+                    <li>{t('packages.santorini.day2_items.item3')}</li>
+                    <li>{t('packages.santorini.day2_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 3: Sea & Sun</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.santorini.day3')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Catamaran cruise around the caldera</li>
-                    <li>Swimming at volcanic hot springs</li>
-                    <li>Beach BBQ lunch</li>
-                    <li>Evening cooking class with local chef</li>
+                    <li>{t('packages.santorini.day3_items.item1')}</li>
+                    <li>{t('packages.santorini.day3_items.item2')}</li>
+                    <li>{t('packages.santorini.day3_items.item3')}</li>
+                    <li>{t('packages.santorini.day3_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 4: Culture & History</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.santorini.day4')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Visit to Akrotiri archaeological site</li>
-                    <li>Red Beach exploration</li>
-                    <li>Traditional village tour</li>
-                    <li>Private caldera view dinner</li>
+                    <li>{t('packages.santorini.day4_items.item1')}</li>
+                    <li>{t('packages.santorini.day4_items.item2')}</li>
+                    <li>{t('packages.santorini.day4_items.item3')}</li>
+                    <li>{t('packages.santorini.day4_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 5: Farewell</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.santorini.day5')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Morning at leisure</li>
-                    <li>Optional spa treatment</li>
-                    <li>Airport transfer</li>
+                    <li>{t('packages.santorini.day5_items.item1')}</li>
+                    <li>{t('packages.santorini.day5_items.item2')}</li>
+                    <li>{t('packages.santorini.day5_items.item3')}</li>
                   </ul>
                 </div>
               </div>
@@ -332,36 +328,33 @@ const TourPackages = () => {
           <div className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-3 sm:h-64">
             <img src={sedonaImage} alt="Sedona red rocks and desert landscape" className="h-full w-full object-cover object-center" />
           </div>
-          <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">Sedona Red Rock Adventure</h2>
+          <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">{t('packages.sedona.title')}</h2>
           <div className="mt-4 grid grid-cols-1 gap-8 lg:grid-cols-2">
             <div>
-              <p className="text-lg text-gray-600 mb-6">Discover the spiritual and natural wonders of Sedona with our 6-day adventure package. Starting at $899 for two people, explore stunning red rock formations and experience the unique energy of this desert paradise.</p>
+              <p className="text-lg text-gray-600 mb-6">{t('packages.sedona.description')}</p>
               
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Package Highlights:</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('packages.sedona.highlights')}</h3>
               <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li>Guided vortex tours</li>
-                <li>Jeep adventure through red rock formations</li>
-                <li>Sunrise yoga sessions</li>
-                <li>Hot air balloon ride</li>
-                <li>Native American cultural experience</li>
-                <li>Hiking in Oak Creek Canyon</li>
+                {t('packages.sedona.highlights_list', { returnObjects: true }).map((highlight, index) => (
+                  <li key={index}>{highlight}</li>
+                ))}
               </ul>
             </div>
             
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Package Details:</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('packages.sedona.details')}</h3>
               <dl className="space-y-4">
                 <div>
-                  <dt className="font-medium text-gray-900">Duration:</dt>
-                  <dd className="text-gray-600">6 days, 5 nights</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.sedona.duration')}</dt>
+                  <dd className="text-gray-600">{t('packages.sedona.duration_value')}</dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-900">Price:</dt>
-                  <dd className="text-gray-600">Starting at $899 for two people<br />Additional guests: +$299 per person</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.sedona.price')}</dt>
+                  <dd className="text-gray-600">{t('packages.sedona.price_value')}<br />{t('packages.sedona.price_additional')}</dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-900">Accommodation:</dt>
-                  <dd className="text-gray-600">Luxury resort with red rock views</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.sedona.accommodation')}</dt>
+                  <dd className="text-gray-600">{t('packages.sedona.accommodation_value')}</dd>
                 </div>
               </dl>
             </div>
@@ -369,65 +362,65 @@ const TourPackages = () => {
 
           {/* Sedona Detailed Itinerary */}
           <div className="mt-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Daily Itinerary</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">{t('packages.kyoto.itinerary')}</h3>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
               {/* Left side: Daily Itinerary */}
               <div className="lg:col-span-6 space-y-6">
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 1: Arrival & Introduction</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.sedona.day1')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Airport pickup from Phoenix/Flagstaff</li>
-                    <li>Welcome ceremony with local guide</li>
-                    <li>Evening vortex introduction</li>
+                    <li>{t('packages.sedona.day1_items.item1')}</li>
+                    <li>{t('packages.sedona.day1_items.item2')}</li>
+                    <li>{t('packages.sedona.day1_items.item3')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 2: Spiritual Awakening</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.sedona.day2')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Sunrise yoga session</li>
-                    <li>Guided vortex tour</li>
-                    <li>Meditation workshop</li>
-                    <li>Stargazing experience</li>
+                    <li>{t('packages.sedona.day2_items.item1')}</li>
+                    <li>{t('packages.sedona.day2_items.item2')}</li>
+                    <li>{t('packages.sedona.day2_items.item3')}</li>
+                    <li>{t('packages.sedona.day2_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 3: Adventure Day</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.sedona.day3')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Pink Jeep tour through red rocks</li>
-                    <li>Hiking at Cathedral Rock</li>
-                    <li>Picnic lunch at scenic viewpoint</li>
-                    <li>Evening sound healing session</li>
+                    <li>{t('packages.sedona.day3_items.item1')}</li>
+                    <li>{t('packages.sedona.day3_items.item2')}</li>
+                    <li>{t('packages.sedona.day3_items.item3')}</li>
+                    <li>{t('packages.sedona.day3_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 4: Native Culture</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.sedona.day4')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Native American cultural experience</li>
-                    <li>Traditional crafts workshop</li>
-                    <li>Medicine wheel ceremony</li>
-                    <li>Storytelling around the fire</li>
+                    <li>{t('packages.sedona.day4_items.item1')}</li>
+                    <li>{t('packages.sedona.day4_items.item2')}</li>
+                    <li>{t('packages.sedona.day4_items.item3')}</li>
+                    <li>{t('packages.sedona.day4_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 5: Natural Wonders</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.sedona.day5')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Hot air balloon ride at sunrise</li>
-                    <li>Oak Creek Canyon hike</li>
-                    <li>Swimming at natural pools</li>
-                    <li>Spa treatment</li>
+                    <li>{t('packages.sedona.day5_items.item1')}</li>
+                    <li>{t('packages.sedona.day5_items.item2')}</li>
+                    <li>{t('packages.sedona.day5_items.item3')}</li>
+                    <li>{t('packages.sedona.day5_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 6: Departure</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.sedona.day6')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Final morning yoga session</li>
-                    <li>Farewell ceremony</li>
-                    <li>Airport transfer</li>
+                    <li>{t('packages.sedona.day6_items.item1')}</li>
+                    <li>{t('packages.sedona.day6_items.item2')}</li>
+                    <li>{t('packages.sedona.day6_items.item3')}</li>
                   </ul>
                 </div>
               </div>
@@ -466,36 +459,33 @@ const TourPackages = () => {
           <div className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-3 sm:h-64">
             <img src={parisImage} alt="Paris cityscape with Eiffel Tower" className="h-full w-full object-cover object-center" />
           </div>
-          <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">Paris: City of Light</h2>
+          <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">{t('packages.paris.title')}</h2>
           <div className="mt-4 grid grid-cols-1 gap-8 lg:grid-cols-2">
             <div>
-              <p className="text-lg text-gray-600 mb-6">Experience the romance and elegance of Paris with our 5-day cultural journey. Starting at $999 for two people, immerse yourself in world-class art, iconic landmarks, and exquisite French cuisine in the heart of Europe's most enchanting city.</p>
+              <p className="text-lg text-gray-600 mb-6">{t('packages.paris.description')}</p>
               
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Package Highlights:</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('packages.paris.highlights')}</h3>
               <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li>Skip-the-line access to the Eiffel Tower</li>
-                <li>Guided tour of the Louvre Museum</li>
-                <li>Seine River dinner cruise</li>
-                <li>Montmartre art district walking tour</li>
-                <li>French pastry and wine tasting experience</li>
-                <li>Day trip to Versailles Palace (optional)</li>
+                {t('packages.paris.highlights_list', { returnObjects: true }).map((highlight, index) => (
+                  <li key={index}>{highlight}</li>
+                ))}
               </ul>
             </div>
             
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Package Details:</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('packages.paris.details')}</h3>
               <dl className="space-y-4">
                 <div>
-                  <dt className="font-medium text-gray-900">Duration:</dt>
-                  <dd className="text-gray-600">5 days, 4 nights</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.paris.duration')}</dt>
+                  <dd className="text-gray-600">{t('packages.paris.duration_value')}</dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-900">Price:</dt>
-                  <dd className="text-gray-600">Starting at $999 for two people<br />Additional guests: +$349 per person</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.paris.price')}</dt>
+                  <dd className="text-gray-600">{t('packages.paris.price_value')}<br />{t('packages.paris.price_additional')}</dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-900">Accommodation:</dt>
-                  <dd className="text-gray-600">Boutique hotel in central Paris</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.paris.accommodation')}</dt>
+                  <dd className="text-gray-600">{t('packages.paris.accommodation_value')}</dd>
                 </div>
               </dl>
             </div>
@@ -503,55 +493,56 @@ const TourPackages = () => {
 
           {/* Paris Detailed Itinerary */}
           <div className="mt-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Daily Itinerary</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">{t('packages.kyoto.itinerary')}</h3>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
               {/* Left side: Daily Itinerary */}
               <div className="lg:col-span-6 space-y-6">
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 1: Bienvenue à Paris</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.paris.day1')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Airport pickup and hotel check-in</li>
-                    <li>Welcome dinner at a traditional French bistro</li>
-                    <li>Evening illuminations tour</li>
+                    <li>{t('packages.paris.day1_items.item1')}</li>
+                    <li>{t('packages.paris.day1_items.item2')}</li>
+                    <li>{t('packages.paris.day1_items.item3')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 2: Iconic Landmarks</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.paris.day2')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Morning visit to the Eiffel Tower with skip-the-line access</li>
-                    <li>Lunch at a local café</li>
-                    <li>Afternoon Seine River cruise</li>
-                    <li>Evening at leisure to explore the Left Bank</li>
+                    <li>{t('packages.paris.day2_items.item1')}</li>
+                    <li>{t('packages.paris.day2_items.item2')}</li>
+                    <li>{t('packages.paris.day2_items.item3')}</li>
+                    <li>{t('packages.paris.day2_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 3: Art & Culture</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.paris.day3')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Guided tour of the Louvre Museum</li>
-                    <li>Lunch in the Tuileries Garden</li>
-                    <li>Visit to Notre-Dame Cathedral (exterior view)</li>
-                    <li>Evening wine and cheese tasting experience</li>
+                    <li>{t('packages.paris.day3_items.item1')}</li>
+                    <li>{t('packages.paris.day3_items.item2')}</li>
+                    <li>{t('packages.paris.day3_items.item3')}</li>
+                    <li>{t('packages.paris.day3_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 4: Montmartre & Culinary Delights</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.paris.day4')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Morning walking tour of Montmartre art district</li>
-                    <li>Visit to Sacré-Cœur Basilica</li>
-                    <li>French pastry cooking class</li>
-                    <li>Farewell dinner cruise on the Seine</li>
+                    <li>{t('packages.paris.day4_items.item1')}</li>
+                    <li>{t('packages.paris.day4_items.item2')}</li>
+                    <li>{t('packages.paris.day4_items.item3')}</li>
+                    <li>{t('packages.paris.day4_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 5: Au Revoir</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.paris.day5')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Morning shopping on Champs-Élysées</li>
-                    <li>Optional visit to Versailles Palace (additional fee)</li>
-                    <li>Airport transfer</li>
+                    <li>{t('packages.paris.day5_items.item1')}</li>
+                    <li>{t('packages.paris.day5_items.item2')}</li>
+                    <li>{t('packages.paris.day5_items.item3')}</li>
+                    <li>{t('packages.paris.day5_items.item4')}</li>
                   </ul>
                 </div>
               </div>
@@ -590,36 +581,33 @@ const TourPackages = () => {
           <div className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-3 sm:h-64">
             <img src={baliImage} alt="Bali rice terraces and temples" className="h-full w-full object-cover object-center" />
           </div>
-          <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">Bali: Island of the Gods</h2>
+          <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">{t('packages.bali.title')}</h2>
           <div className="mt-4 grid grid-cols-1 gap-8 lg:grid-cols-2">
             <div>
-              <p className="text-lg text-gray-600 mb-6">Discover the mystical beauty of Bali with our 5-day tropical paradise experience. Starting at $899 for two people, explore ancient temples, lush rice terraces, and pristine beaches while immersing yourself in the island's rich spiritual culture.</p>
+              <p className="text-lg text-gray-600 mb-6">{t('packages.bali.description')}</p>
               
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Package Highlights:</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('packages.bali.highlights')}</h3>
               <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li>Guided tour of sacred temples including Uluwatu and Tanah Lot</li>
-                <li>Traditional Balinese dance performance</li>
-                <li>Ubud art village exploration</li>
-                <li>Tegallalang rice terrace visit</li>
-                <li>Balinese cooking class</li>
-                <li>Sunset beach dinner</li>
+                {t('packages.bali.highlights_list', { returnObjects: true }).map((highlight, index) => (
+                  <li key={index}>{highlight}</li>
+                ))}
               </ul>
             </div>
             
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Package Details:</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('packages.bali.details')}</h3>
               <dl className="space-y-4">
                 <div>
-                  <dt className="font-medium text-gray-900">Duration:</dt>
-                  <dd className="text-gray-600">5 days, 4 nights</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.bali.duration')}</dt>
+                  <dd className="text-gray-600">{t('packages.bali.duration_value')}</dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-900">Price:</dt>
-                  <dd className="text-gray-600">Starting at $899 for two people<br />Additional guests: +$299 per person</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.bali.price')}</dt>
+                  <dd className="text-gray-600">{t('packages.bali.price_value')}<br />{t('packages.bali.price_additional')}</dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-900">Accommodation:</dt>
-                  <dd className="text-gray-600">Luxury villa with private pool</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.bali.accommodation')}</dt>
+                  <dd className="text-gray-600">{t('packages.bali.accommodation_value')}</dd>
                 </div>
               </dl>
             </div>
@@ -627,55 +615,55 @@ const TourPackages = () => {
 
           {/* Bali Detailed Itinerary */}
           <div className="mt-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Daily Itinerary</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">{t('packages.kyoto.itinerary')}</h3>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
               {/* Left side: Daily Itinerary */}
               <div className="lg:col-span-6 space-y-6">
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 1: Welcome to Paradise</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.bali.day1')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Airport pickup and transfer to villa</li>
-                    <li>Welcome drink and tropical fruit basket</li>
-                    <li>Evening beach dinner at Jimbaran Bay</li>
+                    <li>{t('packages.bali.day1_items.item1')}</li>
+                    <li>{t('packages.bali.day1_items.item2')}</li>
+                    <li>{t('packages.bali.day1_items.item3')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 2: Sacred Temples</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.bali.day2')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Morning visit to Uluwatu Temple</li>
-                    <li>Traditional Kecak dance performance</li>
-                    <li>Afternoon at Tanah Lot Temple</li>
-                    <li>Sunset photography session</li>
+                    <li>{t('packages.bali.day2_items.item1')}</li>
+                    <li>{t('packages.bali.day2_items.item2')}</li>
+                    <li>{t('packages.bali.day2_items.item3')}</li>
+                    <li>{t('packages.bali.day2_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 3: Ubud Cultural Immersion</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.bali.day3')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Tegallalang rice terrace tour</li>
-                    <li>Visit to sacred Monkey Forest</li>
-                    <li>Ubud art market exploration</li>
-                    <li>Traditional Balinese massage</li>
+                    <li>{t('packages.bali.day3_items.item1')}</li>
+                    <li>{t('packages.bali.day3_items.item2')}</li>
+                    <li>{t('packages.bali.day3_items.item3')}</li>
+                    <li>{t('packages.bali.day3_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 4: Culinary & Nature</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.bali.day4')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Morning yoga session</li>
-                    <li>Balinese cooking class with local chef</li>
-                    <li>Visit to coffee plantation</li>
-                    <li>Evening fire dance performance</li>
+                    <li>{t('packages.bali.day4_items.item1')}</li>
+                    <li>{t('packages.bali.day4_items.item2')}</li>
+                    <li>{t('packages.bali.day4_items.item3')}</li>
+                    <li>{t('packages.bali.day4_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 5: Farewell</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.bali.day5')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Morning at leisure by private pool</li>
-                    <li>Optional water temple blessing ceremony</li>
-                    <li>Airport transfer</li>
+                    <li>{t('packages.bali.day5_items.item1')}</li>
+                    <li>{t('packages.bali.day5_items.item2')}</li>
+                    <li>{t('packages.bali.day5_items.item3')}</li>
                   </ul>
                 </div>
               </div>
@@ -714,36 +702,33 @@ const TourPackages = () => {
           <div className="relative h-80 w-full overflow-hidden rounded-lg bg-white sm:aspect-h-1 sm:aspect-w-2 lg:aspect-h-1 lg:aspect-w-3 sm:h-64">
             <img src={goaImage} alt="Goa beaches and culture" className="h-full w-full object-cover object-center" />
           </div>
-          <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">Goa: Beaches & Spices</h2>
+          <h2 className="mt-6 text-3xl font-bold tracking-tight text-gray-900">{t('packages.goa.title')}</h2>
           <div className="mt-4 grid grid-cols-1 gap-8 lg:grid-cols-2">
             <div>
-              <p className="text-lg text-gray-600 mb-6">Experience the perfect blend of relaxation and adventure in Goa with our 5-day coastal retreat. Starting at $799 for two people, enjoy pristine beaches, Portuguese colonial heritage, vibrant markets, and delicious Goan cuisine.</p>
+              <p className="text-lg text-gray-600 mb-6">{t('packages.goa.description')}</p>
               
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Package Highlights:</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('packages.goa.highlights')}</h3>
               <ul className="list-disc pl-6 space-y-2 text-gray-600">
-                <li>Guided tour of Old Goa's Portuguese architecture</li>
-                <li>Spice plantation visit with traditional lunch</li>
-                <li>Sunset beach yoga sessions</li>
-                <li>Anjuna flea market exploration</li>
-                <li>Goan cooking class</li>
-                <li>Dolphin watching cruise</li>
+                {t('packages.goa.highlights_list', { returnObjects: true }).map((highlight, index) => (
+                  <li key={index}>{highlight}</li>
+                ))}
               </ul>
             </div>
             
             <div className="bg-gray-50 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold text-gray-900 mb-4">Package Details:</h3>
+              <h3 className="text-xl font-semibold text-gray-900 mb-4">{t('packages.goa.details')}</h3>
               <dl className="space-y-4">
                 <div>
-                  <dt className="font-medium text-gray-900">Duration:</dt>
-                  <dd className="text-gray-600">5 days, 4 nights</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.goa.duration')}</dt>
+                  <dd className="text-gray-600">{t('packages.goa.duration_value')}</dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-900">Price:</dt>
-                  <dd className="text-gray-600">Starting at $799 for two people<br />Additional guests: +$249 per person</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.goa.price')}</dt>
+                  <dd className="text-gray-600">{t('packages.goa.price_value')}<br />{t('packages.goa.price_additional')}</dd>
                 </div>
                 <div>
-                  <dt className="font-medium text-gray-900">Accommodation:</dt>
-                  <dd className="text-gray-600">Beachfront resort with spa</dd>
+                  <dt className="font-medium text-gray-900">{t('packages.goa.accommodation')}</dt>
+                  <dd className="text-gray-600">{t('packages.goa.accommodation_value')}</dd>
                 </div>
               </dl>
             </div>
@@ -751,56 +736,56 @@ const TourPackages = () => {
 
           {/* Goa Detailed Itinerary */}
           <div className="mt-8">
-            <h3 className="text-2xl font-semibold text-gray-900 mb-6">Daily Itinerary</h3>
+            <h3 className="text-2xl font-semibold text-gray-900 mb-6">{t('packages.kyoto.itinerary')}</h3>
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
               {/* Left side: Daily Itinerary */}
               <div className="lg:col-span-6 space-y-6">
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 1: Coastal Welcome</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.goa.day1')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Airport pickup and resort check-in</li>
-                    <li>Welcome coconut drink and orientation</li>
-                    <li>Evening sunset beach walk</li>
-                    <li>Dinner with live Goan music</li>
+                    <li>{t('packages.goa.day1_items.item1')}</li>
+                    <li>{t('packages.goa.day1_items.item2')}</li>
+                    <li>{t('packages.goa.day1_items.item3')}</li>
+                    <li>{t('packages.goa.day1_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 2: Colonial Heritage</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.goa.day2')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Morning tour of Old Goa churches</li>
-                    <li>Visit to Fontainhas Latin Quarter</li>
-                    <li>Traditional Goan lunch</li>
-                    <li>Evening cruise on the Mandovi River</li>
+                    <li>{t('packages.goa.day2_items.item1')}</li>
+                    <li>{t('packages.goa.day2_items.item2')}</li>
+                    <li>{t('packages.goa.day2_items.item3')}</li>
+                    <li>{t('packages.goa.day2_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 3: Spices & Flavors</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.goa.day3')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Spice plantation tour</li>
-                    <li>Traditional spice-infused lunch</li>
-                    <li>Goan cooking class</li>
-                    <li>Evening beach bonfire</li>
+                    <li>{t('packages.goa.day3_items.item1')}</li>
+                    <li>{t('packages.goa.day3_items.item2')}</li>
+                    <li>{t('packages.goa.day3_items.item3')}</li>
+                    <li>{t('packages.goa.day3_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 4: Beach & Markets</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.goa.day4')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Morning dolphin watching cruise</li>
-                    <li>Beach yoga session</li>
-                    <li>Anjuna flea market visit</li>
-                    <li>Sunset dinner at beachfront shack</li>
+                    <li>{t('packages.goa.day4_items.item1')}</li>
+                    <li>{t('packages.goa.day4_items.item2')}</li>
+                    <li>{t('packages.goa.day4_items.item3')}</li>
+                    <li>{t('packages.goa.day4_items.item4')}</li>
                   </ul>
                 </div>
 
                 <div>
-                  <h4 className="text-lg font-medium text-indigo-600">Day 5: Relaxation & Departure</h4>
+                  <h4 className="text-lg font-medium text-indigo-600">{t('packages.goa.day5')}</h4>
                   <ul className="mt-2 list-disc pl-6 text-gray-600">
-                    <li>Morning Ayurvedic spa treatment</li>
-                    <li>Free time for beach relaxation</li>
-                    <li>Airport transfer</li>
+                    <li>{t('packages.goa.day5_items.item1')}</li>
+                    <li>{t('packages.goa.day5_items.item2')}</li>
+                    <li>{t('packages.goa.day5_items.item3')}</li>
                   </ul>
                 </div>
               </div>

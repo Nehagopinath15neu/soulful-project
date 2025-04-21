@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 // Import components
 import PageHeader from "../components/common/PageHeader";
@@ -14,61 +15,56 @@ import GoaIndia from "../assets/images/GOA.jpeg";
 import ParisFrance from "../assets/images/paris.jpg";
 
 const TopDestination = () => {
+  const { t } = useTranslation();
   // Destination data
   const destinations = [
     {
-      title: "Kyoto, Japan",
+      title: t('destinations.kyoto.title'),
       imgSrc: KyotoJapan,
       alt: "Kyoto Temple",
-      description:
-        "Immerse yourself in centuries of Japanese culture and tradition. Experience ancient temples, serene gardens, traditional tea ceremonies, and the breathtaking beauty of cherry blossoms in this historic imperial capital.",
+      description: t('destinations.kyoto.description'),
       link: "/kyoto",
-      linkText: "Explore Kyoto",
+      linkText: t('destinations.kyoto.cta'),
     },
     {
-      title: "Santorini, Greece",
+      title: t('destinations.santorini.title'),
       imgSrc: SantoriniGreece,
       alt: "Santorini Sunset",
-      description:
-        "Experience the magic of the Mediterranean in this stunning Greek island. From iconic white-washed buildings and blue domes to spectacular sunsets, volcanic beaches, and world-class wineries, Santorini offers a perfect blend of romance and adventure.",
+      description: t('destinations.santorini.description'),
       link: "/santorini",
-      linkText: "Explore Santorini",
+      linkText: t('destinations.santorini.cta'),
     },
     {
-      title: "Sedona, Arizona",
+      title: t('destinations.sedona.title'),
       imgSrc: SedonaArizonaUSA,
       alt: "Sedona Red Rocks",
-      description:
-        "Discover the spiritual heart of the American Southwest. With its stunning red rock formations, energy vortexes, and endless outdoor adventures, Sedona offers a unique blend of natural beauty, spiritual wellness, and outdoor excitement.",
+      description: t('destinations.sedona.description'),
       link: "/sedona",
-      linkText: "Explore Sedona",
+      linkText: t('destinations.sedona.cta'),
     },
     {
-      title: "Bali, Indonesia",
+      title: t('destinations.bali.title'),
       imgSrc: BaliIndonesia,
       alt: "Bali Temple",
-      description:
-        "Discover the Island of the Gods with its lush landscapes, ancient temples, and vibrant culture. From pristine beaches and terraced rice fields to spiritual retreats and world-class surfing, Bali offers a perfect blend of relaxation, adventure, and spiritual awakening.",
+      description: t('destinations.bali.description'),
       link: "/bali",
-      linkText: "Explore Bali",
+      linkText: t('destinations.bali.cta'),
     },
     {
-      title: "Goa, India",
+      title: t('destinations.goa.title'),
       imgSrc: GoaIndia,
       alt: "Goa Beach",
-      description:
-        "Experience the perfect blend of Indian and Portuguese cultures in this coastal paradise. With its golden beaches, spice plantations, colonial architecture, and vibrant nightlife, Goa offers a unique travel experience unlike anywhere else in India.",
+      description: t('destinations.goa.description'),
       link: "/goa",
-      linkText: "Explore Goa",
+      linkText: t('destinations.goa.cta'),
     },
     {
-      title: "Paris, France",
+      title: t('destinations.paris.title'),
       imgSrc: ParisFrance,
       alt: "Eiffel Tower",
-      description:
-        "Fall in love with the City of Light. From iconic landmarks like the Eiffel Tower and Louvre to charming cafés and world-class cuisine, Paris offers a perfect blend of art, history, romance, and culinary excellence in an atmosphere of timeless elegance.",
+      description: t('destinations.paris.description'),
       link: "/paris",
-      linkText: "Explore Paris",
+      linkText: t('destinations.paris.cta'),
     },
   ];
 
@@ -76,8 +72,8 @@ const TopDestination = () => {
     <SectionContainer bgColor="bg-white" paddingY="py-24 sm:py-32">
       {/* Title and description */}
       <PageHeader 
-        title="Our Top Destinations" 
-        description="Discover the magic of these carefully curated destinations that promise unforgettable experiences."
+        title={t('destinations.title')} 
+        description={t('destinations.description')}
       />
 
       {/* Destinations Grid */}

@@ -1,4 +1,5 @@
 import React from "react";
+import { useTranslation } from 'react-i18next';
 
 // Import components
 import AboutSection from "../components/home/AboutSection";
@@ -24,27 +25,48 @@ import redBeach from "../assets/images/red-beach.png";
 import kyotoTemple from "../assets/images/kyoto-temple2.png";
 
 const HomePageContent = () => {
+  const { t } = useTranslation();
   // Data for the about section
   const aboutData = {
     image: about,
-    title: "About Soulful Sojourns",
-    description: "At Soulful Sojourns, we believe travel is not just about places, but about new ways of seeing things. Dedicated to crafting immersive experiences, we connect you with the heart of each destination. Join us for journeys that enrich, inspire, and rejuvenate."
+    title: t('home.about.title'),
+    description: t('home.about.description')
   };
 
   // Data for top destinations section
   const topDestinations = [
-    { src: KyotoJapan, title: "Kyoto, Japan", link: "/kyoto" },
-    { src: SantoriniGreece, title: "Santorini, Greece", link: "/santorini" },
+    { src: KyotoJapan, title: t('destinations.kyoto.title'), link: "/kyoto" },
+    { src: SantoriniGreece, title: t('destinations.santorini.title'), link: "/santorini" },
     { src: SedonaArizonaUSA, title: "Sedona, Arizona, USA", link: "/sedona" },
   ];
 
   // Data for testimonial section
-  const testimonial = {
-    quote: "From the moment I started planning my trip with Soulful Sojourns, I knew I was in for something special. Every detail was handled with care, and the destinations were beyond breathtaking. Highly recommend for anyone looking to truly connect with the places they visit.",
-    author: "Judith Black",
-    authorImage: "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=1024&h=1024&q=80",
-    rating: 5
-  };
+  const testimonials = [
+    {
+      quote: t('home.testimonial.quote'),
+      author: "Judith Black",
+      authorImage: "https://images.unsplash.com/photo-1550525811-e5869dd03032?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=1024&h=1024&q=80",
+      rating: 5
+    },
+    {
+      quote: "The Kyoto cultural tour was beyond my expectations. The guides were knowledgeable and the experiences were authentic. I'll cherish these memories forever!",
+      author: "Michael Chen",
+      authorImage: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      rating: 5
+    },
+    {
+      quote: "Santorini was a dream come true. The views were breathtaking and the local experiences arranged by Soulful Sojourns made our honeymoon truly special.",
+      author: "Emma Rodriguez",
+      authorImage: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      rating: 5
+    },
+    {
+      quote: "Our spiritual journey to Sedona was transformative. The attention to detail and the carefully curated experiences helped us connect with nature and ourselves.",
+      author: "David Thompson",
+      authorImage: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?ixlib=rb-4.0.3&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80",
+      rating: 4
+    }
+  ];
 
   // Data for carousel images
   const carouselImages = [
@@ -76,7 +98,7 @@ const HomePageContent = () => {
       />
 
       {/* Testimonial Section */}
-      <TestimonialSection testimonial={testimonial} />
+      <TestimonialSection testimonials={testimonials} />
 
       {/* Destination Carousel Section */}
       <DestinationCarouselSection images={carouselImages} />

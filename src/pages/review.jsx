@@ -66,6 +66,63 @@ const Reviews = () => {
           ]}
         />
 
+        {/* Bali Reviews */}
+        <ReviewSection
+          title="Bali Experiences"
+          reviews={[
+            {
+              rating: 5,
+              text: 'The sunrise yoga session overlooking the rice terraces followed by a traditional healing ceremony was transformative. The perfect balance of relaxation and spiritual connection.',
+              name: 'Emily & David R.',
+              date: 'Visited April 2024',
+            },
+            {
+              rating: 5,
+              text: 'Our villa in Ubud was absolute paradise. The guided temple tour and cooking class gave us authentic insights into Balinese culture. The beach days in Seminyak were the perfect way to end our trip.',
+              name: 'Jessica & Tom H.',
+              date: 'Visited March 2024',
+            }
+          ]}
+        />
+
+        {/* Goa Reviews */}
+        <ReviewSection
+          title="Goa Experiences"
+          reviews={[
+            {
+              rating: 5,
+              text: 'The heritage walk through Old Goa was fascinating. Learning about the Portuguese influence while exploring the historic churches and mansions gave us a deeper appreciation of Goa\'s unique culture.',
+              name: 'Priya & Robert M.',
+              date: 'Visited April 2024',
+            },
+            {
+              rating: 4,
+              text: 'The beach shack dining experiences were incredible - fresh seafood with your feet in the sand! The spice plantation tour was educational and the sunset cruise was magical.',
+              name: 'Daniel & Sophia L.',
+              date: 'Visited February 2024',
+            }
+          ]}
+        />
+
+        {/* Paris Reviews */}
+        <ReviewSection
+          title="Paris Experiences"
+          reviews={[
+            {
+              rating: 5,
+              text: 'The private evening tour of the Louvre was worth every penny. Seeing the masterpieces without the crowds was incredible. The Seine dinner cruise offered breathtaking views of Paris at night.',
+              name: 'Claire & Paul B.',
+              date: 'Visited April 2024',
+            },
+            {
+              rating: 5,
+              text: 'The guided walk through Montmartre felt like stepping into an artist\'s dream. The patisserie tour was delicious, and our hotel in Saint-Germain was perfectly located for exploring the city.',
+              name: 'Michelle & Antoine D.',
+              date: 'Visited March 2024',
+            }
+          ]}
+        />
+
         {/* Overall Experience */}
         <ReviewSection
           title="Overall Experience"
@@ -91,7 +148,7 @@ const Reviews = () => {
             <Stat label="Average Rating" value="4.9/5" />
             <Stat label="Happy Travelers" value="500+" />
             <Stat label="Would Recommend" value="98%" />
-            <Stat label="Destinations" value="3" />
+            <Stat label="Destinations" value="6" />
           </div>
         </div>
 
@@ -101,18 +158,18 @@ const Reviews = () => {
             Ready to Create Your Own Story?
           </h3>
           <div className="flex justify-center gap-4">
-            <a
-              href="/tour-package"
+            <Link
+              to="/packages"
               className="rounded-md bg-indigo-600 px-6 py-3 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500"
             >
               Explore Tour Packages
-            </a>
-            <a
-              href="/feedback"
+            </Link>
+            <Link
+              to="/feedback"
               className="rounded-md bg-white px-6 py-3 text-sm font-semibold text-indigo-600 shadow-sm ring-1 ring-inset ring-indigo-600 hover:bg-gray-50"
             >
               Share Your Experience
-            </a>
+            </Link>
           </div>
         </div>
       </div>

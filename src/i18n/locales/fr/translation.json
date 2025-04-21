@@ -1,0 +1,289 @@
+{
+  "navbar": {
+    "home": "Accueil",
+    "destinations": "Nos Destinations",
+    "packages": "Forfaits Touristiques",
+    "register": "S'inscrire",
+    "contact": "Contactez-nous",
+    "login": "Connexion"
+  },
+  "home": {
+    "hero": {
+      "title": "Du00e9couvrez le monde avec Soulful Sojourns",
+      "subtitle": "Des expu00e9riences de voyage transformatrices qui vous connectent au cu0153ur de chaque destination",
+      "cta": "Explorer les Destinations"
+    },
+    "about": {
+      "title": "u00c0 propos de Soulful Sojourns",
+      "description": "Chez Soulful Sojourns, nous croyons que voyager ne concerne pas seulement les lieux, mais aussi de nouvelles fau00e7ons de voir les choses. Du00e9diu00e9s u00e0 cru00e9er des expu00e9riences immersives, nous vous connectons au cu0153ur de chaque destination. Rejoignez-nous pour des voyages qui enrichissent, inspirent et rajeunissent."
+    },
+    "destinations": {
+      "title": "Meilleures Destinations de Soulful Sojourns",
+      "cta": "Du00e9couvrez-les!"
+    },
+    "testimonial": {
+      "quote": "Du00e8s le moment ou00f9 j'ai commencu00e9 u00e0 planifier mon voyage avec Soulful Sojourns, j'ai su que j'allais vivre quelque chose de spu00e9cial. Chaque du00e9tail a u00e9tu00e9 traitu00e9 avec soin, et les destinations u00e9taient u00e0 couper le souffle. Je recommande vivement u00e0 tous ceux qui cherchent u00e0 vraiment se connecter avec les lieux qu'ils visitent."
+    }
+  },
+  "destinations": {
+    "title": "Nos Meilleures Destinations",
+    "description": "Du00e9couvrez la magie de ces destinations soigneusement su00e9lectionnu00e9es qui promettent des expu00e9riences inoubliables.",
+    "kyoto": {
+      "title": "Kyoto, Japon",
+      "description": "Plongez dans des siu00e8cles de culture et de tradition japonaises. Vivez l'expu00e9rience des temples anciens, des jardins sereins, des cu00e9ru00e9monies de thu00e9 traditionnelles et de la beautu00e9 u00e9poustouflante des cerisiers en fleurs dans cette historique capitale impu00e9riale.",
+      "cta": "Explorer Kyoto"
+    },
+    "santorini": {
+      "title": "Santorin, Gru00e8ce",
+      "description": "Vivez la magie de la Mu00e9diterranu00e9e dans cette u00eele grecque u00e9poustouflante. Des icu00f4niques bu00e2timents blancs et du00f4mes bleus aux couchers de soleil spectaculaires, plages volcaniques et vignobles de classe mondiale, Santorin offre un mu00e9lange parfait de romance et d'aventure.",
+      "cta": "Explorer Santorin"
+    },
+    "sedona": {
+      "title": "Sedona, Arizona",
+      "description": "Du00e9couvrez le cu0153ur spirituel du sud-ouest amu00e9ricain. Avec ses impressionnantes formations de roche rouge, vortex d'u00e9nergie et aventures en plein air sans fin, Sedona offre un mu00e9lange unique de beautu00e9 naturelle, bien-u00eatre spirituel et excitation en plein air.",
+      "cta": "Explorer Sedona"
+    },
+    "bali": {
+      "title": "Bali, Indonu00e9sie",
+      "description": "Du00e9couvrez l'u00cele des Dieux avec ses paysages luxuriants, temples anciens et culture vibrante. Des plages immaculu00e9es et riziu00e8res en terrasses aux retraites spirituelles et surf de classe mondiale, Bali offre un mu00e9lange parfait de du00e9tente, d'aventure et d'u00e9veil spirituel.",
+      "cta": "Explorer Bali"
+    },
+    "goa": {
+      "title": "Goa, Inde",
+      "description": "Vivez le mu00e9lange parfait des cultures indienne et portugaise dans ce paradis cu00f4tier. Avec ses plages doru00e9es, plantations d'u00e9pices, architecture coloniale et vie nocturne animu00e9e, Goa offre une expu00e9rience de voyage unique diffu00e9rente de tout autre endroit en Inde.",
+      "cta": "Explorer Goa"
+    },
+    "paris": {
+      "title": "Paris, France",
+      "description": "Tombez amoureux de la Ville Lumiu00e8re. Des monuments icu00f4niques comme la Tour Eiffel et le Louvre aux charmants cafu00e9s et cuisine de classe mondiale, Paris offre un mu00e9lange parfait d'art, d'histoire, de romance et d'excellence culinaire dans une atmosphu00e8re d'u00e9lu00e9gance intemporelle.",
+      "cta": "Explorer Paris"
+    }
+  },
+  "reviews": {
+    "title": "Ce Que Disent Nos Voyageurs",
+    "stats": {
+      "rating": "Note Moyenne",
+      "travelers": "Voyageurs Satisfaits",
+      "recommend": "Recommanderaient",
+      "destinations": "Destinations"
+    },
+    "cta": {
+      "title": "Pru00eat u00e0 Cru00e9er Votre Propre Histoire?",
+      "packages": "Explorer les Forfaits Touristiques",
+      "feedback": "Partager Votre Expu00e9rience"
+    }
+  },
+  "language": {
+    "select": "Choisir la Langue"
+  },
+  "packages": {
+    "title": "Forfaits Touristiques",
+    "kyoto": {
+      "title": "Expérience Culturelle de Kyoto",
+      "description": "Plongez au cœur de la culture japonaise avec notre expérience de 7 jours à Kyoto. À partir de 899$ pour deux personnes, ce voyage vous fait découvrir des temples anciens, des cérémonies de thé traditionnelles et la beauté époustouflante des cerisiers en fleurs.",
+      "highlights": "Points Forts du Forfait:",
+      "highlights_list": [
+        "Visites guidées des temples historiques dont Kinkaku-ji et Fushimi Inari",
+        "Expérience de cérémonie de thé traditionnelle",
+        "Séance de méditation dans un jardin Zen",
+        "Expérience de port du kimono",
+        "Cours de cuisine locale",
+        "Observation des cerisiers en fleurs (saisonnier)"
+      ],
+      "details": "Détails du Forfait:",
+      "duration": "Durée:",
+      "duration_value": "7 jours, 6 nuits",
+      "price": "Prix:",
+      "price_value": "À partir de 899$ pour deux personnes",
+      "price_additional": "Voyageurs supplémentaires: +299$ par personne",
+      "accommodation": "Hébergement:",
+      "accommodation_value": "Ryokan traditionnel et hôtels modernes",
+      "itinerary": "Itinéraire Quotidien",
+      "day1": "Jour 1: Arrivée & Bienvenue",
+      "day2": "Jour 2: Temples Anciens & Cérémonie de Thé",
+      "day3": "Jour 3: Immersion Culturelle",
+      "day4": "Jour 4: Sites Sacrés",
+      "day5": "Jour 5: Nature & Jardins",
+      "day6": "Jour 6: Art & Histoire",
+      "day7": "Jour 7: Départ",
+      "day1_items": {
+        "item1": "Accueil à l'aéroport et transfert vers un ryokan traditionnel",
+        "item2": "Dîner de bienvenue avec cuisine saisonnière de Kyoto",
+        "item3": "Orientation en soirée et aperçu du voyage"
+      },
+      "day2_items": {
+        "item1": "Visite matinale du Kinkaku-ji (Pavillon d'Or)",
+        "item2": "Expérience de cérémonie de thé traditionnelle",
+        "item3": "Après-midi au temple Ryoan-ji et son jardin de pierres",
+        "item4": "Promenade nocturne dans le quartier historique de Gion"
+      },
+      "day3_items": {
+        "item1": "Essayage et expérience du port du kimono",
+        "item2": "Cours de cuisine japonaise avec un chef local",
+        "item3": "Visite d'ateliers d'artisanat locaux",
+        "item4": "Séance de méditation en soirée"
+      },
+      "day4_items": {
+        "item1": "Visite matinale du sanctuaire Fushimi Inari",
+        "item2": "Exploration de la forêt de bambous d'Arashiyama",
+        "item3": "Méditation Zen dans un temple local",
+        "item4": "Spectacle de musique traditionnelle"
+      },
+      "day5_items": {
+        "item1": "Observation des cerisiers en fleurs (saisonnier)",
+        "item2": "Visite des jardins du palais impérial",
+        "item3": "Atelier de conception de jardins traditionnels",
+        "item4": "Dîner kaiseki en soirée"
+      },
+      "day6_items": {
+        "item1": "Visite du Château Nijo",
+        "item2": "Atelier d'arts traditionnels (calligraphie/origami)",
+        "item3": "Visites de musées",
+        "item4": "Dîner d'adieu avec spectacle de maiko"
+      },
+      "day7_items": {
+        "item1": "Matinée libre pour le shopping",
+        "item2": "Visite optionnelle du marché local",
+        "item3": "Transfert à l'aéroport"
+      }
+    },
+    "santorini": {
+      "title": "Évasion sur l'Île de Santorin",
+      "description": "Vivez la magie de la Méditerranée avec notre forfait de 6 jours à Santorin. À partir de 1 099$ pour deux personnes, cette escapade romantique offre des couchers de soleil éblouissants, des villages blancs, des eaux cristallines et d'excellents vins locaux.",
+      "highlights": "Points Forts du Forfait:",
+      "highlights_list": [
+        "Observation du coucher de soleil à Oia",
+        "Excursions à la Plage Rouge et à la Plage Noire",
+        "Dégustation de vins dans les vignobles locaux",
+        "Croisière en catamaran avec baignade et snorkeling",
+        "Cours de cuisine grecque traditionnelle",
+        "Visite guidée de l'ancienne Akrotiri"
+      ],
+      "details": "Détails du Forfait:",
+      "duration": "Durée:",
+      "duration_value": "6 jours, 5 nuits",
+      "price": "Prix:",
+      "price_value": "À partir de 1 099$ pour deux personnes",
+      "price_additional": "Voyageurs supplémentaires: +349$ par personne",
+      "accommodation": "Hébergement:",
+      "accommodation_value": "Hôtels boutique avec vue sur la caldéra",
+      "day1": "Jour 1: Bienvenue au Paradis",
+      "day2": "Jour 2: Exploration de l'Île",
+      "day3": "Jour 3: Mer & Soleil",
+      "day4": "Jour 4: Culture & Histoire",
+      "day5": "Jour 5: Au Revoir",
+      "day1_items": {
+        "item1": "Accueil à l'aéroport et transfert panoramique vers l'hôtel",
+        "item2": "Verre de bienvenue au point de vue du coucher de soleil",
+        "item3": "Dîner grec traditionnel à Oia"
+      },
+      "day2_items": {
+        "item1": "Visite matinale à pied d'Oia",
+        "item2": "Visite des églises aux dômes bleus",
+        "item3": "Dégustation de vins l'après-midi",
+        "item4": "Séance photo au coucher du soleil"
+      },
+      "day3_items": {
+        "item1": "Croisière en catamaran autour de la caldéra",
+        "item2": "Baignade dans les sources chaudes volcaniques",
+        "item3": "Déjeuner barbecue sur la plage",
+        "item4": "Cours de cuisine en soirée avec un chef local"
+      },
+      "day4_items": {
+        "item1": "Visite du site archéologique d'Akrotiri",
+        "item2": "Exploration de la Plage Rouge",
+        "item3": "Visite d'un village traditionnel",
+        "item4": "Dîner privé avec vue sur la caldéra"
+      },
+      "day5_items": {
+        "item1": "Matinée libre",
+        "item2": "Soin spa optionnel",
+        "item3": "Transfert à l'aéroport"
+      }
+    },
+    "sedona": {
+      "title": "Voyage Spirituel à Sedona",
+      "description": "Connectez-vous avec la nature et vous-même lors de notre retraite de 5 jours à Sedona. À partir de 799$ pour deux personnes, cette expérience transformatrice combine aventures en plein air et pratiques spirituelles au milieu des impressionnants paysages de roches rouges.",
+      "highlights": "Points Forts du Forfait:",
+      "highlights_list": [
+        "Séances de méditation aux vortex énergétiques",
+        "Randonnées guidées à travers les formations rocheuses rouges",
+        "Yoga au lever du soleil dans la nature",
+        "Expérience en montgolfière",
+        "Expérience culturelle amérindienne",
+        "Observation des étoiles et photographie nocturne"
+      ],
+      "details": "Détails du Forfait:",
+      "duration": "Durée:",
+      "duration_value": "5 jours, 4 nuits",
+      "price": "Prix:",
+      "price_value": "À partir de 799$ pour deux personnes",
+      "price_additional": "Voyageurs supplémentaires: +249$ par personne",
+      "accommodation": "Hébergement:",
+      "accommodation_value": "Resorts écologiques et lodges avec spa"
+    },
+    "bali": {
+      "title": "Retraite Bien-être à Bali",
+      "description": "Rajeunissez votre corps et votre âme avec notre voyage bien-être de 8 jours à Bali. À partir de 1 199$ pour deux personnes, immergez-vous dans la spiritualité balinaise, les paysages luxuriants et les traditions de guérison holistique.",
+      "highlights": "Points Forts du Forfait:",
+      "highlights_list": [
+        "Séances quotidiennes de yoga et de méditation",
+        "Cérémonies traditionnelles de guérison balinaise",
+        "Visites de temples et rituels de bénédiction",
+        "Randonnée dans les rizières en terrasses",
+        "Cours de cuisine balinaise",
+        "Soins spa et consultations bien-être"
+      ],
+      "details": "Détails du Forfait:",
+      "duration": "Durée:",
+      "duration_value": "8 jours, 7 nuits",
+      "price": "Prix:",
+      "price_value": "À partir de 1 199$ pour deux personnes",
+      "price_additional": "Voyageurs supplémentaires: +399$ par personne",
+      "accommodation": "Hébergement:",
+      "accommodation_value": "Villas de luxe et retraites boutique"
+    },
+    "goa": {
+      "title": "Évasion Culturelle & Balnéaire à Goa",
+      "description": "Vivez le mélange parfait de détente et d'immersion culturelle avec notre forfait de 6 jours à Goa. À partir de 699$ pour deux personnes, profitez des plages dorées, du patrimoine portugais et de la culture locale vibrante.",
+      "highlights": "Points Forts du Forfait:",
+      "highlights_list": [
+        "Détente sur des plages privées premium",
+        "Promenade patrimoniale à travers la Vieille Goa",
+        "Visite et dégustation dans une plantation d'épices",
+        "Cours de cuisine traditionnelle de Goa",
+        "Croisière au coucher du soleil avec dîner",
+        "Exploration des marchés locaux"
+      ],
+      "details": "Détails du Forfait:",
+      "duration": "Durée:",
+      "duration_value": "6 jours, 5 nuits",
+      "price": "Prix:",
+      "price_value": "À partir de 699$ pour deux personnes",
+      "price_additional": "Voyageurs supplémentaires: +199$ par personne",
+      "accommodation": "Hébergement:",
+      "accommodation_value": "Resorts de plage et hôtels patrimoniaux"
+    },
+    "paris": {
+      "title": "Romance & Culture de Paris",
+      "description": "Tombez amoureux de la Ville Lumière avec notre expérience de 7 jours à Paris. À partir de 1 299$ pour deux personnes, découvrez des monuments iconiques, une gastronomie de classe mondiale et l'élégance intemporelle qui rend Paris inoubliable.",
+      "highlights": "Points Forts du Forfait:",
+      "highlights_list": [
+        "Visite privée guidée du Louvre",
+        "Croisière-dîner sur la Seine",
+        "Promenade artistique à Montmartre et atelier",
+        "Dégustation de pâtisseries et vins français",
+        "Excursion d'une journée à Versailles",
+        "Soirée au Moulin Rouge"
+      ],
+      "details": "Détails du Forfait:",
+      "duration": "Durée:",
+      "duration_value": "7 jours, 6 nuits",
+      "price": "Prix:",
+      "price_value": "À partir de 1 299$ pour deux personnes",
+      "price_additional": "Voyageurs supplémentaires: +449$ par personne",
+      "accommodation": "Hébergement:",
+      "accommodation_value": "Hôtels boutique au centre de Paris"
+    }
+  }
+}

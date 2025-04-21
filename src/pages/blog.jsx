@@ -7,6 +7,11 @@ import Redrock from "../assets/images/Red-Rock.png";
 import person4 from "../assets/images/person4.png";
 import santoriniSunset from "../assets/images/santorini-sunset.png";
 import person1 from "../assets/images/person1.png";
+import baliTemple from "../assets/images/bali_temple.jpg";
+import person3 from "../assets/images/person3.png";
+import goaBeach from "../assets/images/goa_beach.jpeg";
+import eiffelTower from "../assets/images/eiffiel_tower.jpg";
+import seineRiver from "../assets/images/Seine river.jpg";
 
 const Blog = () => {
   return (
@@ -28,7 +33,7 @@ const Blog = () => {
                 date: "2024-03-16",
                 category: "Spiritual Travel",
                 description:
-                  "Experience the mystical side of Sedona as we explore its famous energy vortexes...",
+                  "Experience the mystical side of Sedona as we explore its famous energy vortexes and discover how these powerful sites can transform your travel experience into a spiritual awakening.",
                 author: "Sarah Johnson",
                 role: "Spiritual Guide & Travel Writer",
                 image: Redrock,
@@ -39,7 +44,7 @@ const Blog = () => {
                 date: "2024-03-20",
                 category: "Island Life",
                 description:
-                  "While Oia's sunset is world-famous, Santorini holds countless other treasures...",
+                  "While Oia's sunset is world-famous, Santorini holds countless other treasures waiting to be discovered. From secret beaches to family-owned wineries, explore the authentic side of this Greek paradise.",
                 author: "Elena Papadopoulos",
                 role: "Local Guide & Culture Expert",
                 image: santoriniSunset,
@@ -50,11 +55,44 @@ const Blog = () => {
                 date: "2024-03-25",
                 category: "Cultural Journey",
                 description:
-                  "Immerse yourself in the tranquil beauty of Kyoto's temple gardens through the seasons...",
+                  "Immerse yourself in the tranquil beauty of Kyoto's temple gardens through the seasons. Learn how these masterpieces of landscape design embody the principles of harmony, simplicity, and mindfulness.",
                 author: "Takashi Yamamoto",
                 role: "Garden Master & Cultural Guide",
                 image: kyotoTemple2,
                 avatar: person2,
+              },
+              {
+                title: "Sacred Temples and Healing Rituals: Bali's Spiritual Side",
+                date: "2024-04-02",
+                category: "Wellness Travel",
+                description:
+                  "Beyond Bali's beautiful beaches lies a world of spiritual traditions and healing practices. Join us as we explore ancient temples, participate in purification ceremonies, and discover the island's unique approach to wellness and balance.",
+                author: "Maya Dewi",
+                role: "Wellness Expert & Cultural Guide",
+                image: baliTemple,
+                avatar: person3,
+              },
+              {
+                title: "Goa's Perfect Blend: Portuguese Heritage Meets Indian Spirit",
+                date: "2024-04-10",
+                category: "Cultural Fusion",
+                description:
+                  "Discover how centuries of Portuguese influence created India's most unique coastal destination. From colonial architecture and fusion cuisine to vibrant markets and golden beaches, Goa offers a travel experience unlike anywhere else in the subcontinent.",
+                author: "Raj Fernandes",
+                role: "Historian & Food Explorer",
+                image: goaBeach,
+                avatar: person4,
+              },
+              {
+                title: "Paris Beyond the Postcard: A Local's Guide to the City of Light",
+                date: "2024-04-15",
+                category: "Urban Exploration",
+                description:
+                  "Step away from the tourist crowds and discover the Paris that locals cherish. From hidden gardens and neighborhood cafés to underground art scenes and architectural treasures, experience the authentic heart of the world's most romantic city.",
+                author: "Sophie Laurent",
+                role: "Parisian Writer & Cultural Guide",
+                image: eiffelTower,
+                avatar: person1,
               },
             ].map((post, index) => (
               <article

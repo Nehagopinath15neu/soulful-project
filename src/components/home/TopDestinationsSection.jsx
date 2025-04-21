@@ -1,9 +1,11 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import SectionContainer from '../common/SectionContainer';
 import DestinationCard from '../common/DestinationCard';
 import CTAButton from '../common/CTAButton';
 
 const TopDestinationsSection = ({ backgroundImage, destinations }) => {
+  const { t } = useTranslation();
   return (
     <div className="relative">
       {/* Background for larger screens */}
@@ -31,21 +33,21 @@ const TopDestinationsSection = ({ backgroundImage, destinations }) => {
         </div>
 
         <div className="relative py-32">
-          <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl md:text-6xl">
-            Top Destinations of Soulful Sojourns
+          <h1 className="text-3xl font-bold tracking-tight text-white sm:text-4xl md:text-5xl">
+            {t('home.destinations.title')}
           </h1>
-          <div className="mt-4 sm:mt-6">
+          <div className="mt-6 sm:mt-8">
             <CTAButton to="/topdestination" variant="primary">
-              Checkout!
+              {t('home.destinations.cta')}
             </CTAButton>
           </div>
         </div>
       </div>
 
       {/* Destination cards */}
-      <section aria-labelledby="collection-heading" className="relative -mt-96 sm:-mt-32">
+      <section aria-labelledby="collection-heading" className="relative -mt-96 sm:-mt-24">
         <h2 id="collection-heading" className="sr-only">Collections</h2>
-        <div className="mx-auto grid max-w-md grid-cols-1 gap-y-6 px-4 sm:max-w-7xl sm:grid-cols-3 sm:gap-x-6 sm:gap-y-0 sm:px-6 lg:gap-x-8 lg:px-8">
+        <div className="mx-auto grid max-w-md grid-cols-1 gap-y-6 px-4 sm:max-w-7xl sm:grid-cols-3 sm:gap-x-6 sm:gap-y-0 sm:px-6 lg:gap-x-8 lg:px-8 mt-6 sm:mt-10">
           {destinations.map((destination, index) => (
             <DestinationCard 
               key={index}
