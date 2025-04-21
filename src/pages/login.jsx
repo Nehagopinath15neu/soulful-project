@@ -1,6 +1,5 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import logo from "../assets/images/logo.png";
 import loginImage from "../assets/images/login.png";
 
 const Login = () => {
@@ -9,8 +8,7 @@ const Login = () => {
       <div className="flex flex-1 flex-col justify-center px-4 py-12 sm:px-6 lg:flex-none lg:px-20 xl:px-24">
         <div className="mx-auto w-full max-w-sm lg:w-96">
           <div>
-            <img className="h-20 w-auto" src={logo} alt="Soulful Sojourns" />
-            <h2 className="mt-8 text-2xl/9 font-bold tracking-tight text-gray-900">Login to your Soulful Sojourns</h2>
+            <h2 className="text-2xl/9 font-bold tracking-tight text-gray-900">Login to your Soulful Sojourns</h2>
             <p className="mt-2 text-sm/6 text-gray-500">
               Not a member?
               <Link to="/signup" className="font-semibold text-indigo-600 hover:text-indigo-500"> Create your Account here!</Link>

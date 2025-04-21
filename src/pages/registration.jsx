@@ -1,7 +1,61 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 const Registration = () => {
   const [submittedData, setSubmittedData] = useState(null);
+  const [selectedPackages, setSelectedPackages] = useState({
+    kyoto: false,
+    santorini: false,
+    sedona: false,
+    paris: false,
+    bali: false,
+    goa: false
+  });
+  const [numberOfPeople, setNumberOfPeople] = useState(2);
+  const [totalCost, setTotalCost] = useState(0);
+
+  // Package pricing data
+  const packagePrices = {
+    kyoto: { basePrice: 899, additionalPersonCost: 299 },
+    santorini: { basePrice: 899, additionalPersonCost: 299 },
+    sedona: { basePrice: 899, additionalPersonCost: 299 },
+    paris: { basePrice: 999, additionalPersonCost: 349 },
+    bali: { basePrice: 899, additionalPersonCost: 299 },
+    goa: { basePrice: 799, additionalPersonCost: 249 }
+  };
+
+  // Handle package selection change
+  const handlePackageChange = (e) => {
+    const { name, checked } = e.target;
+    setSelectedPackages(prev => ({
+      ...prev,
+      [name]: checked
+    }));
+  };
+
+  // Handle number of people change
+  const handlePeopleChange = (e) => {
+    setNumberOfPeople(parseInt(e.target.value, 10));
+  };
+
+  // Calculate total cost whenever selections change
+  useEffect(() => {
+    let cost = 0;
+    
+    // Add up the cost for each selected package
+    Object.keys(selectedPackages).forEach(pkg => {
+      if (selectedPackages[pkg]) {
+        // Base price for 2 people
+        cost += packagePrices[pkg].basePrice;
+        
+        // Add cost for additional people beyond 2
+        if (numberOfPeople > 2 && numberOfPeople <= 5) {
+          cost += packagePrices[pkg].additionalPersonCost * (numberOfPeople - 2);
+        }
+      }
+    });
+    
+    setTotalCost(cost);
+  }, [selectedPackages, numberOfPeople]);
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -9,10 +63,34 @@ const Registration = () => {
     const form = e.target;
     const formData = new FormData(form);
 
+    // Process the form data
     const data = {};
     formData.forEach((value, key) => {
       data[key] = value;
     });
+    
+    // Add selected destinations
+    const selectedDestinations = [];
+    Object.keys(selectedPackages).forEach(pkg => {
+      if (selectedPackages[pkg]) {
+        // Format destination names nicely
+        const destinationNames = {
+          kyoto: 'Kyoto Cultural Experience',
+          santorini: 'Santorini Island Paradise',
+          sedona: 'Sedona Red Rock Adventure',
+          paris: 'Paris: City of Light',
+          bali: 'Bali: Island of the Gods',
+          goa: 'Goa: Beaches & Spices'
+        };
+        selectedDestinations.push(destinationNames[pkg]);
+      }
+    });
+    
+    // Add destinations and total cost to the data object
+    if (selectedDestinations.length > 0) {
+      data['Destinations'] = selectedDestinations.join(', ');
+      data['Total Cost'] = `$${totalCost}`;
+    }
 
     setSubmittedData(data);
     form.reset();
@@ -80,13 +158,20 @@ const Registration = () => {
             <div className="mt-6 sm:col-span-3">
               <label htmlFor="number-of-people" className="block text-sm font-medium text-gray-900">Number of People</label>
               <div className="mt-2">
-                <select id="number-of-people" name="number-of-people" className="block w-full rounded-md py-1.5 px-3 mt-2 ring-1 ring-inset ring-gray-300 focus:ring-indigo-600">
+                <select 
+                  id="number-of-people" 
+                  name="number-of-people" 
+                  value={numberOfPeople}
+                  onChange={handlePeopleChange}
+                  className="block w-full rounded-md py-1.5 px-3 mt-2 ring-1 ring-inset ring-gray-300 focus:ring-indigo-600"
+                >
                   <option value="2">2 People - Base Price</option>
-                  <option value="3">3 People (+$299 per person)</option>
-                  <option value="4">4 People (+$299 per person)</option>
-                  <option value="5">5 People (+$299 per person)</option>
+                  <option value="3">3 People (Additional person cost varies by package)</option>
+                  <option value="4">4 People (Additional person cost varies by package)</option>
+                  <option value="5">5 People (Additional person cost varies by package)</option>
                   <option value="6">6+ People (Contact us for group rates)</option>
                 </select>
+                <p className="text-xs text-gray-500 mt-1">Additional person cost varies by package ($249-$349 per person)</p>
               </div>
             </div>
 
@@ -111,9 +196,31 @@ const Registration = () => {
                       label: "Sedona Red Rock Adventure",
                       description: "6 days of hiking, spiritual vortexes, and desert beauty - Starting at $899 for two people",
                     },
+                    {
+                      id: "paris",
+                      label: "Paris: City of Light",
+                      description: "5 days immersed in art, iconic landmarks, and exquisite French cuisine - Starting at $999 for two people",
+                    },
+                    {
+                      id: "bali",
+                      label: "Bali: Island of the Gods",
+                      description: "5 days exploring sacred temples, rice terraces, and pristine beaches - Starting at $899 for two people",
+                    },
+                    {
+                      id: "goa",
+                      label: "Goa: Beaches & Spices",
+                      description: "5 days of coastal relaxation, Portuguese heritage, and vibrant markets - Starting at $799 for two people",
+                    },
                   ].map((pkg) => (
                     <div key={pkg.id} className="flex gap-3">
-                      <input id={pkg.id} name={pkg.id} type="checkbox" className="h-5 w-5 text-indigo-600" />
+                      <input 
+                        id={pkg.id} 
+                        name={pkg.id} 
+                        type="checkbox" 
+                        checked={selectedPackages[pkg.id]} 
+                        onChange={handlePackageChange} 
+                        className="h-5 w-5 text-indigo-600" 
+                      />
                       <div className="text-sm">
                         <label htmlFor={pkg.id} className="font-medium text-gray-900">{pkg.label}</label>
                         <p className="text-gray-500">{pkg.description}</p>
@@ -125,12 +232,48 @@ const Registration = () => {
             </div>
           </div>
 
+          {/* Cost Estimation */}
+          <div className="pt-10 pb-6">
+            <h2 className="text-base font-semibold text-gray-900 mb-4">Cost Estimation</h2>
+            
+            {totalCost > 0 ? (
+              <div className="bg-gray-50 p-6 rounded-lg">
+                <div className="space-y-4">
+                  <h3 className="text-lg font-medium text-gray-900">Selected Packages:</h3>
+                  <ul className="list-disc pl-6 space-y-2">
+                    {Object.keys(selectedPackages).map(pkg => (
+                      selectedPackages[pkg] && (
+                        <li key={pkg} className="text-gray-600">
+                          <span className="font-medium">{pkg.charAt(0).toUpperCase() + pkg.slice(1)}</span>: ${packagePrices[pkg].basePrice} base price
+                          {numberOfPeople > 2 && numberOfPeople <= 5 && (
+                            <span> + ${packagePrices[pkg].additionalPersonCost * (numberOfPeople - 2)} for {numberOfPeople - 2} additional {numberOfPeople - 2 === 1 ? 'person' : 'people'}</span>
+                          )}
+                        </li>
+                      )
+                    ))}
+                  </ul>
+                  
+                  <div className="border-t border-gray-200 pt-4">
+                    <div className="flex justify-between items-center">
+                      <span className="text-lg font-semibold text-gray-900">Total Estimated Cost:</span>
+                      <span className="text-2xl font-bold text-indigo-600">${totalCost}</span>
+                    </div>
+                    <p className="text-sm text-gray-500 mt-2">This is an estimated cost based on your selections. Final pricing may vary.</p>
+                  </div>
+                </div>
+              </div>
+            ) : (
+              <p className="text-gray-600">Select at least one package to see cost estimation.</p>
+            )}
+          </div>
+
           {/* Buttons */}
           <div className="flex items-center justify-end gap-x-6 pt-6">
             <a href="/" className="text-sm font-semibold text-gray-900 hover:text-gray-700">Cancel</a>
             <button
               type="submit"
               className="rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus:outline-indigo-600"
+              disabled={totalCost === 0}
             >
               Save
             </button>
@@ -159,12 +302,34 @@ const Registration = () => {
           <div className="border-t border-gray-200 pt-8">
             <h4 className="text-lg font-semibold text-gray-900 mb-6">Registration Details</h4>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {Object.entries(submittedData).map(([key, value], i) => (
-                <div key={i} className="flex flex-col">
-                  <span className="text-sm font-medium text-gray-500">{key.replace(/[-_]/g, ' ')}</span>
-                  <span className="mt-1 text-base font-medium text-gray-900">{value}</span>
-                </div>
-              ))}
+              {Object.entries(submittedData).map(([key, value], i) => {
+                // Special formatting for destinations
+                if (key === 'Destinations') {
+                  return (
+                    <div key={i} className="flex flex-col md:col-span-2">
+                      <span className="text-sm font-medium text-gray-500">Destinations</span>
+                      <div className="mt-1">
+                        {value.split(', ').map((destination, index) => (
+                          <div key={index} className="text-base font-medium text-gray-900 mb-1">{destination}</div>
+                        ))}
+                      </div>
+                    </div>
+                  );
+                }
+                // Skip individual package checkboxes from display
+                else if (['kyoto', 'santorini', 'sedona', 'paris', 'bali', 'goa'].includes(key)) {
+                  return null;
+                }
+                // Regular formatting for other fields
+                else {
+                  return (
+                    <div key={i} className="flex flex-col">
+                      <span className="text-sm font-medium text-gray-500">{key.replace(/[-_]/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</span>
+                      <span className="mt-1 text-base font-medium text-gray-900">{value}</span>
+                    </div>
+                  );
+                }
+              })}
             </div>
           </div>
         </div>

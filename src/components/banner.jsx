@@ -1,7 +1,25 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 const Banner = () => {
+  const [isVisible, setIsVisible] = useState(true);
+  
+  // Check localStorage on component mount to see if banner was previously dismissed
+  useEffect(() => {
+    const bannerDismissed = localStorage.getItem('bannerDismissed');
+    if (bannerDismissed === 'true') {
+      setIsVisible(false);
+    }
+  }, []);
+  
+  // Function to handle banner dismissal
+  const handleDismiss = () => {
+    setIsVisible(false);
+    localStorage.setItem('bannerDismissed', 'true');
+  };
+  
+  if (!isVisible) return null;
+  
   return (
     <div className="relative isolate flex items-center gap-x-6 overflow-hidden bg-gray-50 px-6 py-2 sm:px-3.5 sm:before:flex-1 offers-banner">
       {/* Left blurred shape */}
@@ -58,6 +76,7 @@ const Banner = () => {
         <button
           type="button"
           className="-m-3 p-3 focus-visible:outline-offset-[-4px]"
+          onClick={handleDismiss}
         >
           <span className="sr-only">Dismiss</span>
           <svg

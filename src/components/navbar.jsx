@@ -43,7 +43,7 @@ const Header = () => {
         {/* Desktop menu */}
         <div className="hidden lg:flex lg:gap-x-12 lg:ml-auto">
           <Link to="/destinations" className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out">
-            Top Destinations
+            Our Destinations
           </Link>
           <Link to="/packages" className="text-sm font-semibold leading-6 text-gray-900 hover:text-indigo-600 transition duration-150 ease-in-out">
             Tour Packages

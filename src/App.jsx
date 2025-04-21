@@ -52,6 +52,11 @@ import Footer from "./components/footer";
 import Review from "./pages/review";
 import Feedback from "./pages/feedback";
 import Kyoto from "./pages/kyoto";
+import Santorini from "./pages/santorini";
+import Sedona from "./pages/sedona";
+import Bali from "./pages/bali";
+import Goa from "./pages/goa";
+import Paris from "./pages/paris";
 
 function App() {
   const location = useLocation();
@@ -82,6 +87,11 @@ function App() {
         <Route path="/review" element={<Review />} />
         <Route path="/feedback" element={<Feedback />} />
         <Route path="/kyoto" element={<Kyoto />} />
+        <Route path="/santorini" element={<Santorini />} />
+        <Route path="/sedona" element={<Sedona />} />
+        <Route path="/bali" element={<Bali />} />
+        <Route path="/goa" element={<Goa />} />
+        <Route path="/paris" element={<Paris />} />
       </Routes>
       
       <Footer />

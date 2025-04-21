@@ -1,0 +1,124 @@
+/* Custom styles for React Slick carousel */
+
+.carousel-container {
+  position: relative;
+  margin: 0 auto;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+/* Style the arrows */
+.slick-prev, 
+.slick-next {
+  font-size: 0;
+  line-height: 0;
+  position: absolute;
+  top: 50%;
+  display: block;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  transform: translate(0, -50%);
+  cursor: pointer;
+  color: transparent;
+  border: none;
+  outline: none;
+  background: rgba(79, 70, 229, 0.7);  /* Indigo color with transparency */
+  border-radius: 50%;
+  z-index: 10;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: rgba(79, 70, 229, 0.9);
+}
+
+.slick-prev {
+  left: 10px;
+}
+
+.slick-next {
+  right: 10px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 24px;
+  opacity: 1;
+  color: white;
+}
+
+/* Style the dots */
+.slick-dots {
+  bottom: -35px;
+  position: absolute;
+  display: flex !important;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  margin: 0 5px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 10px;
+  height: 10px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
+}
+
+.slick-dots li button:before {
+  font-size: 12px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  content: '•';
+  text-align: center;
+  color: #4f46e5; /* Indigo color to match the site theme */
+  opacity: 0.5;
+}
+
+.slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #4f46e5;
+}
+
+/* Add transition effect to slides */
+.slick-slide {
+  transition: all 0.3s ease;
+  padding: 0 8px;
+}
+
+/* Add hover effect to images */
+.carousel-container .slick-slide img {
+  transition: all 0.3s ease;
+  border-radius: 0.5rem;
+}
+
+.carousel-container .slick-slide:hover img {
+  transform: scale(1.03);
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+/* Fix for dots visibility */
+.slick-slider {
+  margin-bottom: 45px;
+}
